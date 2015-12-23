@@ -23,3 +23,7 @@ body,html{
 span{
     float: bottom;
 }
+.btn-info.active {
+            background-color: black;
+    }
+    

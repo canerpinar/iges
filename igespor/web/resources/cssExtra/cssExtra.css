@@ -12,12 +12,14 @@ body,html{
  
   //background-color: yellowgreen;
   height: 100%;
+ 
 }
 #header{
     height: 190px;
 }
 #container_2{
     margin-top: 25px;
+    margin-left: 80px;
 
 }
 span{

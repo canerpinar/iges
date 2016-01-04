@@ -24,5 +24,17 @@ and open the template in the editor.
         <pattern value="/HAKKIMIZDA"/>
         <view-id value="/faces/hakkimizda.xhtml"/>
     </url-mapping>
+     
+    <url-mapping>
+        <pattern value="/BILGI_EDINME"/>
+        <view-id value="/faces/bilgiedinme.xhtml"/> 
+    </url-mapping>       
+      
         
+    <url-mapping>
+        <pattern value="/ERISEBILIRLIK"/>
+        <view-id value="/faces/erisebilirlik.xhtml"/> 
+    </url-mapping>       
+        
+            
 </pretty-config>

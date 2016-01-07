@@ -10,7 +10,7 @@ and open the template in the editor.
 
 body,html{
  
-  //background-color: yellowgreen;
+    background-image: url(images/background_v1.png);
   height: 100%;
  
 }

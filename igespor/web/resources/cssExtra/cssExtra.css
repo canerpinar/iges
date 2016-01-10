@@ -10,15 +10,16 @@ and open the template in the editor.
 
 body,html{
  
-    background-image: url(images/background_v3.png);
+
   height: 100%;
+  background-image: url(images/background_v4.png);
  
 }
 #header{
-    height: 190px;
+    height: 400px;
 }
 #container_2{
-    margin-top: 25px;
+    
     
 
 }

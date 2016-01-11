@@ -18,14 +18,14 @@
     <h:body>
 
         
-            
+            <!--Header Alanı igesLogo,background-->
         
 <div class="row" id="header">
 
     <div class="container">
         <div class="row">        
-                <div class="col-md-6">
-                    <h:link outcome="faces/index.xhtml"><img src="/igespor/resources/images/iges_logo_4.png" class="img-responsive" /></h:link>
+                <div class="col-md-6 col-xs-6 col-lg-6">
+                    <h:link outcome="faces/index.xhtml"><img src="/igespor/resources/images/iges_logo_4.png" /></h:link>
                 </div>
                         
                 <div class="col-md-1 col-xs-1"><a href=""><img src="/igespor/resources/images/facebook.png" width="50" height="50"/></a></div>
@@ -34,36 +34,139 @@
     </div>  
 </div>
         
+       <!--Header Alanı BİTİŞ igesLogo,background-->
        
+        <div class="container">
+            <div class="row">
+                
+                        <div class="container">
+                            <div class="row"   style="border-radius: 50px;">
+                                <div class="col-md-3" style="background-color: #245269; height: 100%; border-radius: 50px;">
+                                    <!--SOL Kenar Container başlangıç-->
+                                    <div class="container" >
+                                        <div class="row">
+                                            <a href="#"><img src="/igespor/resources/images/iges_logo_4.png" class="img-responsive" /></a>
+                                        </div>
+                                        <!--MENULER-->
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <ul class="nav nav-pills nav-stacked navbar-left">
+                                                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                                                    <li role="presentation"><a href="#">ANASAYFA</a></li>
+                                                    <li role="presentation"><a href="#">HAKKIMIZDA</a></li>
+                                                    <li role="presentation"><a href="#">İLETİŞİM</a></li>
+                                                    <li role="presentation"><a href="#">ERİŞİLEBİLİRLİK</a></li>
+                                                    <li role="presentation"><a href="#">BİLGİ EDİNME</a></li>
+                                                    <li role="presentation"><a href="#">YÖNETİM</a></li>
+                                                </ul>                                                
+                                            </div>
+                                        </div>
+                                        <!--Menuler BİTİŞ-->
+                                        <div class="row row-no-padding">
+                                            
+                                                <div>
+                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:link outcome="faces/index.xhtml" class="btn btn-info btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/masterpage_2.jpg" style="border-radius: 50px;" class="img-responsive"/>Anasayfa</h:link></div>
+                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:link outcome="faces/hakkimizda.xhtml" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/meet-icon-2.png" style="border-radius: 50px;" class="img-responsive"/>Hakkımızda</h:link></div>
+                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:link outcome="faces/iletisim.xhtml" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/contac_2.png" style="border-radius: 50px;" class="img-responsive"/>İletişim</h:link></div>                        
+                                                </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="row row-no-padding">
+                                                <div>
+                                                    <div class="col-md-1"><h:link outcome="faces/erisebilirlik.xhtml" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/masterpage_2.jpg" style="border-radius: 50px;" class="img-responsive"/>Erişilebilirlik</h:link></div>
+                                                    <div class="col-md-1"><h:link outcome="faces/bilgiedinme.xhtml" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/meet-icon-2.png" style="border-radius: 50px;" class="img-responsive"/>Bilgi Edinme</h:link></div>
+                                                  <div class="col-md-1"><h:link outcome="faces/yonetim.xhtml" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/meet-icon-2.png" style="border-radius: 50px;" class="img-responsive"/>Yönetim</h:link></div>
+                                                </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <!--Sol Kenar Container BİTİŞ-->
+                                    
+                                    
+                                    
+                                    
+                                </div>
 
+                                <div class="col-md-6">
+
+                                    <ui:insert name="master">
+
+
+                                    </ui:insert>
+
+                                </div>
+
+                                <div class="col-md-3">
+
+                                    <img src="/igespor/resources/images/resim_2_1.jpg" alt="Bakalım bundan sonrası" width="100%" class=" img-circle-"  style="box-shadow: 0 0 90px #7d7163; margin-top: 5px;"/>
+                                    <img src="/igespor/resources/images/resim_2_1.jpg" alt="Bakalım bundan sonrası" width="100%" class=" img-circle-"  style="box-shadow: 0 0 90px #7d7163; margin-top: 5px;"/>
+
+                                </div>
     
-        <div class="row">
+                            </div>
+
+                        </div>
+
+                
+            </div>
             
-                    <div class="container" id="container_2">
+            
+
+            
+            
+            
+        </div>        
+            
+
+            
+       
+        
+        
+        <!--
+    
+        
+            
+<div class="container" id="container_2">
     <div class="row">
-        <div class="col-md-3" ><img src="/igespor/resources/images/gorme_engeli_haftasi.jpg" class="img-responsive" style="border-radius: 10px;" /></div>
-            
-        <div class="col-md-6">
-            <div style="text-align: justify; background-color: white; ">
-                    <ui:insert name="master">
-
-
-                    </ui:insert>
-                </div>                            
+        <div class="col-md-3 col-xs-3 col-lg-3" >
+            <img src="/igespor/resources/images/iges_logo_4.png" class="img-responsive" />
         </div>
             
-        <div class="col-md-3" style=" border-radius: 10px; background-color: white;">
+        <div class="col-md-6 col-xs-6 col-lg-6">
+                    <div style="text-align: justify; background-color: white; ">
+                            <ui:insert name="master">
+
+
+                            </ui:insert>
+                        </div>                            
+        </div>
             
-            <img src="/igespor/resources/images/resim_2_1.jpg" alt="Bakalım bundan sonrası" width="100%" class=" img-circle-"  style="box-shadow: 0 0 90px #7d7163; margin-top: 5px;"/>
-            <center><div class="row" style="background-color: black; height: 2px; width: 100%; margin-top: 5px;"></div></center>
-            <img src="/igespor/resources/images/resim_2_1.jpg" alt="Bakalım bundan sonrası" width="100%" class=" img-circle-"  style="box-shadow: 0 0 90px #7d7163; margin-top: 5px;"/>
-            <center><div class="row" style="background-color: black; height: 2px; width: 100%; margin-top: 5px;"></div></center>
+        <div class="col-md-3 col-xs-3 col-lg-3" style=" border-radius: 10px; background-color: white;">
+
+                    <img src="/igespor/resources/images/resim_2_1.jpg" alt="Bakalım bundan sonrası" width="100%" class=" img-circle-"  style="box-shadow: 0 0 90px #7d7163; margin-top: 5px;"/>
+
+                    <img src="/igespor/resources/images/resim_2_1.jpg" alt="Bakalım bundan sonrası" width="100%" class=" img-circle-"  style="box-shadow: 0 0 90px #7d7163; margin-top: 5px;"/>
+
         </div>
             
             
     <div class="row">
-        <div class="col-md-3" style="position: absolute; margin-top: 200px;">
+        <div class="col-md-3 col-xs-3 col-lg-3">
             <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12 col-lg-3">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role="presentation" class="active"><a href="#">Home</a></li>
+                        <li role="presentation"><a href="#">Profile</a></li>
+                        <li role="presentation"><a href="#">Messages</a></li>
+                        <li role="presentation"><a href="#">Home</a></li>
+                        <li role="presentation"><a href="#">Profile</a></li>
+                        <li role="presentation"><a href="#">Messages</a></li>
+                    </ul>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div>
                         <div class="col-md-1"><h:link outcome="faces/index.xhtml" class="btn btn-info btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/masterpage_2.jpg" style="border-radius: 50px;" class="img-responsive"/>Anasayfa</h:link></div>
@@ -105,8 +208,8 @@
  </div>
             
             
-            
-        </div>
+          -->  
+   
         
 
 

@@ -30,3 +30,9 @@ span{
             background-color: black;
     }
     
+    .row-no-padding {
+        margin-left: -45px;
+        margin-top: 5px;
+      
+  }
+  

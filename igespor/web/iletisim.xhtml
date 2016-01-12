@@ -9,7 +9,38 @@
     <h:body>
         <ui:composition template="resources/template.xhtml">
             <ui:define name="master">
-                İletişim sayfası
+                <div class="container-fluid">
+                    <div class="row">
+ 
+                        
+                        <div class="col-md-6"><center><img src="/igespor/resources/images/adres_icon.jpg" class="img-circle" width="50%"/></center></div>
+                        <div class="col-md-6 row-no-padding">Adres:Zuhubatbaba Mahallesi Bakır Sokak NO:6-1 <br/>Bakırköy-İstanbul<br/>
+                        Telefon:0212 658 8952
+                        </div>
+                        
+                    </div>
+                    
+ 
+                    
+                    <div class="row" style="background-color: #ffffff; height: 2px;"></div>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.7577575214223!2d28.86819131541342!3d40.986784979302925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb57e3bad209%3A0x7c98644b462879b8!2zQmFrxLFyIFNrLiwgWnVodXJhdGJhYmEsIDM0MTQ3IEJha8SxcmvDtnkvxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1452627548743" width="500" height="450" frameborder="0" style="border-bottom-style: groove; margin-top: 15px;"></iframe><br/>
+                Sizi daha iyi anlayabilmek adına aşağıdaki formu doldurunuz.<br/>
+                İLETİŞİM FORMU
+                <h:panelGrid columns="2">
+                    <h:outputText value="AD:" />
+                    <h:inputText />
+                    
+                    <h:outputText value="SOYAD :" />
+                    <h:inputText />
+                    
+                    <h:outputText value="E-MAİL:" />
+                    <h:inputText />
+                    
+                    <h:outputText value="MESAJINIZ :" />
+                    <h:inputTextarea />
+                    
+                </h:panelGrid>
             </ui:define>            
         </ui:composition>
         

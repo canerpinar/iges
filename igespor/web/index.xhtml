@@ -10,9 +10,9 @@
     </h:head>
     <h:body>
         <ui:composition template="resources/template.xhtml">
-                    
+
             <ui:define name="master">                
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<div id="carousel-example-generic" class="carousel slide carousel_Extra" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -21,22 +21,25 @@
   </ol>
 
   <!-- Wrapper for slides -->
+
+      
+  
   <div class="carousel-inner" role="listbox">
-      <div class="item active" style="border-radius: 10px;">
-      <img src="/igespor/resources/images/resim_1.jpg" alt="Deneme ve Sonrası"/>
+      <div class="item active">
+          <img src="/igespor/resources/images/resim_1.jpg" alt="Deneme ve Sonrası" style="width: 75%; margin: 0 auto;"/>
       <div class="carousel-caption">
         İges Spor Tatil' de
       </div>
     </div>
-    <div class="item"  style="border-radius: 10px;">
-        <img src="/igespor/resources/images/resim_2.jpg" alt="Bakalım bundan sonrası"/>
+    <div class="item">
+        <h:link outcome="faces/index.xhtml"><img src="/igespor/resources/images/resim_2.jpg" alt="Bakalım bundan sonrası" style="width: 75%; margin: 0 auto;"/></h:link>
       <div class="carousel-caption">
         İges Spor Tatil' de
       </div>
     </div>
     
     <div class="item"  style="border-radius: 10px;" >
-      <img src="/igespor/resources/images/resim_3.jpg" alt="..."/>
+      <img src="/igespor/resources/images/resim_3.jpg" alt="..." style="width: 75%; margin: 0 auto;"/>
       <div class="carousel-caption">
         İges Spor Tatil' de
       </div>
@@ -55,9 +58,8 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-                
-                
-                <div style="margin-left: 5px; text-indent: 30px; margin-right: 5px;">
+                               
+                <div style="margin-left: 5px; text-indent: 30px; margin-right: 5px; margin-top: 15px; text-align: justify;">
                     
                     Hali vakti yerinde bir adam olan Adnan Bey, kırk kırk beş yaşlarında bir İstanbul beyefendisidir. Karısı bir süre önce ölmüştür. Adnan Bey, genç kızlık çağına girmek üzere olan kızı Nihal ve daha küçük yaşta bulu­nan oğlu Bülent'le birlikte, oldukça sakin bir yaşayış sürdürmektedir. Ko­naklarında bazı yardımcıları da bulunmaktadır.
 
@@ -91,6 +93,7 @@ Adnan Bey'le Bihter'in evliliklerinin üstünden bir yıldan fazla bir za­man g
                 
               
             </ui:define>
+
         </ui:composition>
     </h:body>
 </html>

@@ -2,50 +2,88 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body>
         <ui:composition template="resources/template.xhtml">
             <ui:define name="master">
-                <div class="container-fluid">
-                    <div class="row">
- 
-                        
-                        <div class="col-md-6"><center><img src="/igespor/resources/images/adres_icon.jpg" class="img-circle" width="50%"/></center></div>
-                        <div class="col-md-6 row-no-padding">Adres:Zuhubatbaba Mahallesi Bakır Sokak NO:6-1 <br/>Bakırköy-İstanbul<br/>
-                        Telefon:0212 658 8952
-                        </div>
-                        
-                    </div>
-                    
- 
-                    
-                    <div class="row" style="background-color: #ffffff; height: 2px;"></div>
-                </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.7577575214223!2d28.86819131541342!3d40.986784979302925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb57e3bad209%3A0x7c98644b462879b8!2zQmFrxLFyIFNrLiwgWnVodXJhdGJhYmEsIDM0MTQ3IEJha8SxcmvDtnkvxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1452627548743" width="500" height="450" frameborder="0" style="border-bottom-style: groove; margin-top: 15px;"></iframe><br/>
+
                 <div class="container-fluid" style="font-size: large; font-weight: bold; margin-top: 15px;">
                     
                 Sizi daha iyi anlayabilmek adına aşağıdaki formu doldurunuz.<br/>
                 İLETİŞİM FORMU
-                <h:panelGrid columns="2">
-                    <h:outputText value="AD:" />
-                    <h:inputText class="form-control"/>
-                    
-                    <h:outputText value="SOYAD :" />
-                    <h:inputText class="form-control" />
-                    
-                    <h:outputText value="E-MAİL:" />
-                    <h:inputText class="form-control"/>
-                    
-                    <h:outputText value="MESAJINIZ :" />
-                    <h:inputTextarea class="form-control"/>
-                    
-                </h:panelGrid>
-                    
-                </div>                
-
+    <h:form class="form-horizontal">
+            <div class="form-group">
+                 <label for="inputEmail3" class="col-sm-3 control-label">AD :</label>
+                 <div class="col-sm-5">
+                     <h:inputText id="ad" class="form-control"  required="true" requiredMessage="Boş bırakılamaz"/>
+                 </div>
+                 <div class="col-sm-4">
+                     <h:message for="ad" style="color:red"/>
+                 </div>
+            </div>
+        
+            <div class="form-group">
+                 <label for="inputPassword3" class="col-sm-3 control-label">SOYAD :</label>
+                 <div class="col-sm-5">
+                     <h:inputText id="soyad" class="form-control" required="true" requiredMessage="Boş bırakılamaz"/>
+                 </div>
+                 <div class="col-sm-4">
+                     <h:message for="soyad" style="color:red"/>
+                 </div>
+            </div>
+        
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-3 control-label">EMAİL :</label>
+                <div class="col-sm-5">
+                    <h:inputText id="email" class="form-control" required="true" requiredMessage="Boş bırakılamaz"/>
+                </div> 
+                <div class="col-sm-4">
+                     <h:message for="email" style="color:red"/>
+                 </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-3 control-label">BAŞLIK :</label>
+                <div class="col-sm-9">
+                    <h:selectOneMenu>
+                           <f:selectItem itemValue="English" itemLabel="GOLBOL" />
+                           <f:selectItem itemValue="Turkish" itemLabel="YÜZME" />
+                           <f:selectItem itemValue="Italian" itemLabel="SATRANÇ" />
+                           <f:selectItem itemValue="Italian" itemLabel="FUTSA" />
+                           <f:selectItem itemValue="Italian" itemLabel="DİĞER" />                           
+                           
+                   </h:selectOneMenu>
+                </div>                 
+            </div>
+        
+        
+            <div class="form-group">
+                <label class="col-sm-3 control-label">AÇIKLAMA :</label>
+                <div class="col-sm-5">
+                    <h:inputTextarea id="aciklama" value="" class="form-control" required="true" requiredMessage="Boş bırakılamaz"/>
+                </div> 
+               <div class="col-sm-4">
+                     <h:message for="aciklama" style="color:red"/>
+                 </div>
+                
+            </div>
+        
+        
+            <div class="form-group">
+                
+                <div class="col-sm-12">
+                    <h:commandButton value="GÖNDER" style="width: 100%; margin: 0 auto;" />
+                </div>                 
+            </div>
+        
+    </h:form>
+                </div> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.7577575214223!2d28.86819131541342!3d40.986784979302925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb57e3bad209%3A0x7c98644b462879b8!2zQmFrxLFyIFNrLiwgWnVodXJhdGJhYmEsIDM0MTQ3IEJha8SxcmvDtnkvxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1452627548743" width="500" height="450" frameborder="0" style="border-bottom-style: groove; margin-top: 15px;"></iframe><br/>
+                        
             </ui:define>            
         </ui:composition>
         

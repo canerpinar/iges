@@ -42,3 +42,6 @@ span{
 .carousel_Extra{
     background-image: url(images/background_slider.png);
 }
+.seperator{
+    height: 3px; width: 100%; margin: 0 auto; margin-top: 35px;  background-image: url(images/background_seperator.png);
+}

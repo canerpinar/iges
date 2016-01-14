@@ -10,10 +10,15 @@
         <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <h:outputStylesheet library="cssExtra" name="cssExtra.css" />
         <h:outputStylesheet library="cssExtra" name="cssSlider.css" />
+        <h:outputScript library="js" name="jsOthers.js" />
+        
+
+        
     </h:head>
     <h:body>
 
@@ -24,10 +29,15 @@
 
     <div class="container">
         <div class="row">        
-                <div class="col-md-6 col-xs-6 col-lg-6">
+                <div class="col-md-2 col-xs-2 col-lg-2">
                     <h:link outcome="faces/index.xhtml"><img src="/igespor/resources/images/iges_logo_4.png" /></h:link>
                 </div>
-                        
+            <div class="col-md-4" onmousemove="mouseUp()" onmouseout="mouseout()">
+                <img src="/igespor/resources/images/image_serkan_laplace.png" class="img-responsive"></img>
+                <img src="/igespor/resources/images/image_serkan.jpg" class="img-responsive" id="img_serkan" style="margin-top: -270px; display: none;"/>
+            </div>
+            <div class="col-md-4"><img src="/igespor/resources/images/iges_yuzme_ekibi_laplace.png" class="img-responsive"/></div>
+            
                 <div class="col-md-1 col-xs-1"><a href=""><img src="/igespor/resources/images/facebook.png" width="50" height="50"/></a></div>
                 <div class="col-md-1 col-xs-1"><a href=""><img src="/igespor/resources/images/twitter.png" width="50" height="50"/></a></div>                  
         </div>
@@ -35,8 +45,8 @@
 </div>
         
        <!--Header Alanı BİTİŞ igesLogo,background-->
-       
-       <div class="container" style="margin-top: -50px;">
+       <div class="row" id="row_container_1">
+       <div class="container" style="margin-top: -50px;" id="container_1">
             <div class="row">
                 
                         <div class="container">
@@ -45,7 +55,7 @@
                                     <!--SOL Kenar Container başlangıç-->
                                     <div class="container" >
                                         <div class="row">
-                                            <a href="#"><img src="/igespor/resources/images/destek.png" class="img-responsive" width="20%" /></a>
+                                            <a href="#"><img src="/igespor/resources/images/destek.png" class="img-responsive" width="15%" /></a>
                                         </div>
                                         <!--MENULER-->
                                         <div class="row" style="margin-top: 25px;">
@@ -135,7 +145,7 @@
             
             
         </div>        
-            
+    </div>        
        <div class="navbar-inverse" style="margin: 0 auto;">
                     
                 <div class="container-fluid" style="margin-left: 50px;">

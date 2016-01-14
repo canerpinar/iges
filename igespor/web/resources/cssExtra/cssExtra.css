@@ -12,16 +12,15 @@ body,html{
  
 
   height: 100%;
-  background-image: url(images/background_v4.png);
+  background-color: #908c96;
  
 }
 #header{
-    height: 400px;
+    height: 1200px;
+    background-image: url(images/background_v7.png);
 }
-#container_2{
-    
-    
-
+#row_container_1{
+    margin-top: -850px;
 }
 span{
     float: bottom;
@@ -41,6 +40,14 @@ span{
 }
 .carousel_Extra{
     background-image: url(images/background_slider.png);
+    height: 300px;
+}
+.carousel-inner-Extra{
+    border-radius: 50px;
+    
+}
+.item_Extra{
+    margin-top: 15px;
 }
 .seperator{
     height: 3px; width: 100%; margin: 0 auto; margin-top: 35px;  background-image: url(images/background_seperator.png);

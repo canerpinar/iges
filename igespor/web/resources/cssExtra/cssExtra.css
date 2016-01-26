@@ -52,3 +52,8 @@ span{
 .seperator{
     height: 3px; width: 100%; margin: 0 auto; margin-top: 35px;  background-image: url(images/background_seperator.png);
 }
+@media only screen and (min-width: 100px) {
+    .deneme{
+        position: relative; margin-top: -270px; display: none;
+    }
+}

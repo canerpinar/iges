@@ -36,5 +36,14 @@ and open the template in the editor.
         <view-id value="/faces/erisebilirlik.xhtml"/> 
     </url-mapping>       
         
+    <url-mapping>
+        <pattern value="/YONETIM"/>
+        <view-id value="/faces/yonetim.xhtml"/> 
+    </url-mapping> 
+    
+    <url-mapping>
+        <pattern value="/SPOR"/>
+        <view-id value="/faces/spor.xhtml"/> 
+    </url-mapping>   
             
 </pretty-config>

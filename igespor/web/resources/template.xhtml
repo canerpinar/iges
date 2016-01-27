@@ -30,7 +30,7 @@
     <div class="container">
         <div class="row">        
                 <div class="col-md-2 col-xs-2 col-lg-2">
-                    <h:link outcome="faces/index.xhtml"><img src="/igespor/resources/images/iges_logo_4.png" /></h:link>
+                    <h:link outcome="index.xhtml"><img src="/igespor/resources/images/iges_logo_4.png" /></h:link>
                 </div>
             <div class="col-md-4" onmousemove="mouseUp()" onmouseout="mouseout()">
                 <img src="/igespor/resources/images/image_serkan_laplace.png" class="img-responsive"></img>
@@ -62,19 +62,19 @@
                                             <div class="col-md-5">
                                                 <ul class="nav nav-pills nav-stacked navbar-left">
                                                     
-                                                    <li role="presentation" style="font-size: large;"><h:link outcome="faces/index.xhtml">ANASAYFA</h:link></li>  
+                                                    <li role="presentation" style="font-size: large;"><h:link outcome="index.xhtml">ANASAYFA</h:link></li>  
                                                     <li role="presantation" style="height: 1px; background-color: white;"></li>
-                                                    <li role="presentation" style="font-size: large;"><h:link outcome="faces/hakkimizda.xhtml">HAKKIMIZDA</h:link></li>
+                                                    <li role="presentation" style="font-size: large;"><h:link outcome="hakkimizda.xhtml">HAKKIMIZDA</h:link></li>
                                                     <li role="presantation" style="height: 1px; background-color: white;"></li>
-                                                    <li role="presentation" style="font-size: large;"><h:link outcome="faces/iletisim.xhtml">İLETİŞİM</h:link></li>
+                                                    <li role="presentation" style="font-size: large;"><h:link outcome="iletisim.xhtml">İLETİŞİM</h:link></li>
                                                     <li role="presantation" style="height: 1px; background-color: white;"></li>
-                                                    <li role="presentation" style="font-size: large;"><h:link outcome="faces/erisebilirlik.xhtml">ERİŞİLEBİLİRLİK</h:link></li>
+                                                    <li role="presentation" style="font-size: large;"><h:link outcome="erisebilirlik.xhtml">ERİŞİLEBİLİRLİK</h:link></li>
                                                     <li role="presantation" style="height: 1px; background-color: white;"></li>
-                                                    <li role="presentation" style="font-size: large;"><h:link outcome="faces/bilgiedinme.xhtml">BİLGİ EDİNME</h:link></li>
+                                                    <li role="presentation" style="font-size: large;"><h:link outcome="bilgiedinme.xhtml">BİLGİ EDİNME</h:link></li>
                                                     <li role="presantation" style="height: 1px; background-color: white;"></li>
-                                                    <li role="presentation" style="font-size: large;"><h:link outcome="faces/yonetim.xhtml">YÖNETİM</h:link></li>
+                                                    <li role="presentation" style="font-size: large;"><h:link outcome="yonetim.xhtml">YÖNETİM</h:link></li>
                                                     <li role="presantation" style="height: 1px; background-color: white;"></li>
-                                                    <li role="presentation" style="font-size: large;"><h:link outcome="faces/basinmedya.xhtml">BASINDA BİZ</h:link></li>
+                                                    <li role="presentation" style="font-size: large;"><h:link outcome="basinmedya.xhtml">BASINDA BİZ</h:link></li>
                                                     <li role="presantation" style="height: 1px; background-color: white;"></li>
                                                 </ul>                                                
                                             </div>
@@ -84,18 +84,18 @@
                                         <div class="row row-no-padding">
                                             
                                                 <div>
-                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:commandLink action="#{sporBean.sporDali('yüzme')}" class="btn btn-info btn-sm" style="height: 90px; width: 90px; font-weight: bold;" ><img src="/igespor/resources/images/masterpage_2.jpg" style="border-radius: 50px;" class="img-responsive"/>GOLBOL</h:commandLink></div>
-                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:commandLink action="#{sporBean.sporDali('yüzme')}" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/meet-icon-2.png" style="border-radius: 50px;" class="img-responsive"/>YÜZME</h:commandLink></div>
-                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:commandLink action="#{sporBean.sporDali('yüzme')}" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/contac_2.png" style="border-radius: 50px;" class="img-responsive"/>SATRANÇ</h:commandLink></div>                        
+                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:commandLink action="#{sporBean.sporDali(1)}" class="btn btn-info btn-sm" style="height: 90px; width: 90px; font-weight: bold;" ><img src="/igespor/resources/images/masterpage_2.jpg" style="border-radius: 50px;" class="img-responsive"/>GOLBOL</h:commandLink></div>
+                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:commandLink action="#{sporBean.sporDali(2)}" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/meet-icon-2.png" style="border-radius: 50px;" class="img-responsive"/>YÜZME</h:commandLink></div>
+                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:commandLink action="#{sporBean.sporDali(3)}" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/contac_2.png" style="border-radius: 50px;" class="img-responsive"/>SATRANÇ</h:commandLink></div>                        
                                                 </div>
                                             
                                         </div>
                                         
                                         <div class="row row-no-padding">
                                                 <div>
-                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:commandLink action="#{sporBean.sporDali('yüzme')}" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/masterpage_2.jpg" style="border-radius: 50px;" class="img-responsive"/>FUTSA</h:commandLink></div>
-                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:commandLink action="#{sporBean.sporDali('yüzme')}" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/meet-icon-2.png" style="border-radius: 50px;" class="img-responsive"/>JUDO</h:commandLink></div>
-                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:commandLink action="#{sporBean.sporDali('yüzme')}" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/meet-icon-2.png" style="border-radius: 50px;" class="img-responsive"/>DİĞER</h:commandLink></div>
+                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:commandLink action="#{sporBean.sporDali(4)}" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/masterpage_2.jpg" style="border-radius: 50px;" class="img-responsive"/>FUTSA</h:commandLink></div>
+                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:commandLink action="#{sporBean.sporDali(5)}" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/meet-icon-2.png" style="border-radius: 50px;" class="img-responsive"/>JUDO</h:commandLink></div>
+                                                    <div class="col-md-1 col-xs-4 col-lg-1"><h:commandLink action="#{sporBean.sporDali(6)}" class="btn btn-default btn-sm" style="height: 90px; width: 90px; font-weight: bold;"><img src="/igespor/resources/images/meet-icon-2.png" style="border-radius: 50px;" class="img-responsive"/>DİĞER</h:commandLink></div>
                                                 </div>
                                         </div>
                                     </h:form>
@@ -124,10 +124,10 @@
                                             <marquee attribute_name="attribute_value" direction="up" scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();" style="height: 50px; margin-top: 15px;">
                                                 <div style="color:red;">
                                                     <label class="label-info label">DUYURULAR</label>
-                                                    <div style="background-color: whitesmoke;"><h:link outcome="faces/iletisim.xhtml">**İges Kulübünün ENGELSİZ UFKA BİR KÜREK DE SEN ÇEK projesi kabul edilmiştir.</h:link></div>
+                                                    <div style="background-color: whitesmoke;"><h:link outcome="iletisim.xhtml">**İges Kulübünün ENGELSİZ UFKA BİR KÜREK DE SEN ÇEK projesi kabul edilmiştir.</h:link></div>
                                                     <div class="row" style="background-color: aqua; height: 2px; border-radius: 5px;"></div>
                                                     
-                                                    <div><h:link outcome="faces/iletisim.xhtml">**İges Kulübü spor yapacak arkadaşlarları beklememktedir.Bunun için iletişim formunu doldurunuz.</h:link></div>
+                                                    <div><h:link outcome="iletisim.xhtml">**İges Kulübü spor yapacak arkadaşlarları beklememktedir.Bunun için iletişim formunu doldurunuz.</h:link></div>
                                                     <div class="row" style="background-color: aqua; height: 2px; border-radius: 5px;"></div>
                                                 </div>
 

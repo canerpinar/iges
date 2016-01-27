@@ -1,0 +1,62 @@
+SATRANÇ 
+Bu kurallar, gözleri az gören ve gözleri gören oyuncular ile görme engelli oyuncular arasındaki rekabetçi yarışlarda, görme engellilerin ihtiyaçlarını karşılamak için FIDA Kurallarına ilave olarak uygulanacaktır.
+
+Turnuva yöneticileri, aşağıdaki kuralları yerel koşullara uyarlama yetkisine sahiptir. Gözleri gören ve görme engelli (yasal olarak kör) oyuncular arasındaki rekabetçi satrançta, her oyuncu iki oyun tahtası kullanılmasını talep edebilir; gözleri gören oyuncu normal bir oyun tahtası kullanırken, görme engelli oyuncu özel olarak yapılmış bir oyun tahtası kullanabilir. Özel olarak yapılan oyun tahtası aşağıdaki gereklilikleri karşılamalıdır:
+
+(a) En az yirmi santime yirmi santim olmalıdır;
+(b) Siyah kareler hafifçe yükseltilmiş olmalıdır;
+(c) Her karede bir emniyet boşluğu olmalıdır;
+(d) Her taş, emniyet boşluğuna uyan bir kanca ile temin edilmelidir;
+(e) Taşlar Staunton tasarımı olmalıdır ve siyah taşlar özel olarak işaretlenmelidir.
+
+GENEL KURALLAR
+
+1. Hamleler açık bir şekilde duyurulacak, rakip tarafından tekrar edilecek ve kendi oyun tahtasında da gerçekleştirilecektir. Duyuruyu mümkün olduğunca net bir şekilde yapmak için, tekabül eden harfler yerine aşağıdaki isimlerin kullanılması önerilir, kullanılacak olan rakam ve işaret sistemi aşağıdaki gibidir:
+
+A~Anna B~Belia C~Ceasar D~David
+E~Eva F~Felix G~Gustav H~Hector
+
+Beyazdan siyaha kadar olan derecelere Alman rakamları verilir:
+
+1~Eins 2~Zwei 3~Drei 4~Vier
+5~Fünf 6~Sechs 7~Sieben 8~Acht
+
+Rok yapmak; “Lange Rochade” (Almanca’da büyük rok) ve “Kurtze Rochade” (Almanca’da küçük rok) olarak duyurulur.
+
+Taşların isimleri şunlardır: Koenig, Dame, Turm, Laeufer, Springer, Bauer. Oyuncu, bir piyonu ilerletirken, seçtiği piyonu duyurmalıdır.
+
+2. Görme engelli oyuncunun oyun tahtasında, bir taş emniyet boşluğundan çıkarıldığında “dokunuldu” olarak kabul edilecektir.
+
+3. Aşağıdaki durumlarda, bir hamle “yapıldı” olarak kabul edilecektir:
+
+(a) Ele geçirme durumunda, ele geçirilen taş, hamle sırası onda olan oyuncunun oyun tahtasından çıkarıldığında;
+(b) Bir taş farklı bir emniyet boşluğuna yerleştirildiğinde;
+(c) Hamle duyurulduğunda.
+
+Ancak bundan sonra rakibin saati başlatılacaktır.
+
+Madde 2 ve 3 söz konusu olduğu sürece, gözleri gören oyuncu için normal kurallar geçerlidir.
+
+4. Görme engelli oyuncu için, özel olarak yapılmış bir satranç saatine izin verilir. Bu saat aşağıdaki özellikleri taşıyacaktır:
+
+(a) Kadran sağlam kollarla tutturulacak, her beş dakika, bir nokta ile işaretlenecek ve her on beş dakika iki yüksek nokta ile belirtilecektir.
+(b) Kolayca hissedilebilir bir bayrak olacaktır. Bayrağın, oyuncunun tam saatin son beş dakikası boyunca dakika kolunu hissetmesini sağlayacak şekilde düzenlenmesine özen gösterilecektir.
+
+5. Görme engelli bir oyuncu, oyunun skorunu Braille ile ya da el yazısıyla tutmalı ya da hamleleri bir teybe kaydetmelidir.
+
+6. Bir hamlenin duyurulması sırasındaki bir dil sürçmesi, derhal ve rakip tarafın saati başlamadan düzeltilmelidir.
+
+7. Bir oyun esnasında iki oyun tahtası üzerinde farklı pozisyonlar ortaya çıkarsa, bu durum, kontrolörün yardımı ile ve her iki oyuncunun oyun skorlarına bakarak düzeltilmelidirler. Eğer iki oyun skoru birbiriyle aynı ise, doğru hamleyi yazan, fakat yanlış hamle yapan oyuncu, pozisyonunu doğru oyun skorundaki hamleye göre düzeltmelidir.
+
+8. Bu gibi farklılıklar meydana geldiğinde ve oyun skorlarının farklı olduğu ortaya çıktığında, hamleler, iki skorun birbirine uygun olduğu noktaya geri çekilmeli ve kontrolör saatleri uygun şekilde yeniden ayarlamalıdır.
+
+9. Görme engelli oyuncu, aşağıdaki görevlerin herhangi birine ya da tümüne sahip olacak olan bir yardımcıdan yararlanma hakkına sahip olacaktır:
+
+(a) Her iki oyuncunun hamlesini rakibin oyun tahtasında oynamak.
+(b) Her iki oyuncunun hamlelerini duyurmak.
+(c) Görme engelli oyuncunun oyun skorunu tutmak ve rakibinin saatini başlatmak (Bkz. Kural 3.c).
+(d) Görme engelli oyuncuya, yalnız istediği zaman, tamamlanan hamlelerin numarasını ve her iki oyuncu tarafından kullanılan süreyi bildirmek.
+(e) Zaman sınırının aşıldığı durumlarda hak talep etmek ve gözleri gören oyuncu taşlarından birine dokunduğunda kontrolöre haber vermek.
+(f) Oyun ertelendiğinde ya da ara verildiğinde gerekli formaliteleri yerine getirmek.
+
+10. Eğer görme engelli oyuncu bir yardımcı kullanmazsa, gözleri gören oyuncu, madde (9.a) ve (9.b)’de söz edilen görevleri yerine getirecek olan bir yardımcı kullanabilir.

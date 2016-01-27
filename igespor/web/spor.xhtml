@@ -9,7 +9,15 @@
     <h:body>
         <ui:composition template="resources/template.xhtml">
             <ui:define name="master">
-        SPOR SAYFASI
+                <h:form>
+                    <div style="text-align: justify;">
+                        #{sporBean.content}
+                        
+                    </div>
+                    
+                </h:form>
+                
+                
             </ui:define>
         </ui:composition>
     </h:body>

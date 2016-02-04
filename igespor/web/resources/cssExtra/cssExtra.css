@@ -52,8 +52,31 @@ span{
 .seperator{
     height: 3px; width: 100%; margin: 0 auto; margin-top: 35px;  background-image: url(images/background_seperator.png);
 }
+
+#img_serkan
+{
+    position: relative; margin-top: -270px; display: none;
+}
 @media only screen and (min-width: 100px) {
-    .deneme{
-        position: relative; margin-top: -270px; display: none;
+
+    #img_serkan{
+        visibility: hidden;
+        margin-top: -330px;
+    }
+    
+    #duyurular{
+    background-color: yellow;    
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    #img_serkan{
+        visibility: visible;
+        margin-top: -270px;
+    }
+    
+    #duyurular{
+    background-color: yellowgreen;    
     }
 }

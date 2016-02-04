@@ -9,6 +9,9 @@
     <h:body>
         <ui:composition template="resources/template.xhtml">
             <ui:define name="master">
+                <img src="/igespor/resources/images/#{sporBean.graphic_1}" class="img-responsive"/>
+                <div class="row seperator"></div>
+                <img src="/igespor/resources/images/#{sporBean.graphic_2}" class="img-responsive" style="margin-top: 35px;"/>
                 <h:form>
                     <div style="text-align: justify;">
                         #{sporBean.content}

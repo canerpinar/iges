@@ -1,19 +1,13 @@
 
-import java.io.File;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.Serializable;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
-
-import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
-import javax.servlet.ServletContext;
-import javax.servlet.jsp.PageContext;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -26,11 +20,32 @@ import javax.servlet.jsp.PageContext;
  * @author caner
  */
 @ManagedBean(name = "sporBean")
-@SessionScoped
+@ApplicationScoped
 public class sporBean implements Serializable{
     
     
     String Content;
+    String graphic_1;
+    String graphic_2;
+    
+    public String getGraphic_1() {
+        return graphic_1;
+    }
+
+    public void setGraphic_1(String graphic_1) {
+        this.graphic_1 = graphic_1;
+    }
+
+    public String getGraphic_2() {
+        return graphic_2;
+    }
+
+    public void setGraphic_2(String graphic_2) {
+        this.graphic_2 = graphic_2;
+    }
+    
+
+
 
     public String getContent() {
         return Content;
@@ -54,6 +69,8 @@ public class sporBean implements Serializable{
             {                    
                      try {
                          content = new String(Files.readAllBytes(Paths.get(realPath+"resources/golbol.txt")));
+                         graphic_1="golbol_1.jpg";
+                         graphic_2="golbol_2.jpg";
                          return content;
                      } catch (IOException ex) {
                          Logger.getLogger(sporBean.class.getName()).log(Level.SEVERE, null, ex);
@@ -64,6 +81,8 @@ public class sporBean implements Serializable{
             {                    
                      try {
                          content = new String(Files.readAllBytes(Paths.get(realPath+"resources/yuzme.txt")));
+                         graphic_1="yuzme_1.jpg";
+                         graphic_2="yuzme_2.jpg";
                          return content;
                      } catch (IOException ex) {
                          Logger.getLogger(sporBean.class.getName()).log(Level.SEVERE, null, ex);
@@ -74,6 +93,8 @@ public class sporBean implements Serializable{
             {                    
                      try {
                          content = new String(Files.readAllBytes(Paths.get(realPath+"resources/satranc.txt")));
+                         graphic_1="satranc_1.jpg";
+                         graphic_2="satranc_2.jpg";
                          return content;
                      } catch (IOException ex) {
                          Logger.getLogger(sporBean.class.getName()).log(Level.SEVERE, null, ex);
@@ -84,6 +105,8 @@ public class sporBean implements Serializable{
             {                    
                      try {
                          content = new String(Files.readAllBytes(Paths.get(realPath+"resources/futsa.txt")));
+                         graphic_1="futsal_1.jpg";
+                         graphic_2="futsal_2.jpg";
                          return content;
                      } catch (IOException ex) {
                          Logger.getLogger(sporBean.class.getName()).log(Level.SEVERE, null, ex);
@@ -93,7 +116,9 @@ public class sporBean implements Serializable{
             case 5:
             {                    
                      try {
-                         content = new String(Files.readAllBytes(Paths.get(realPath+"resources/futsa.txt")));
+                         content = new String(Files.readAllBytes(Paths.get(realPath+"resources/judo.txt")));
+                         graphic_1="judo_1.jpg";
+                         graphic_2="judo_2.jpg";
                          return content;
                      } catch (IOException ex) {
                          Logger.getLogger(sporBean.class.getName()).log(Level.SEVERE, null, ex);

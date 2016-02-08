@@ -16,11 +16,11 @@ body,html{
  
 }
 #header{
-    height: 1200px;
+    
     background-image: url(images/background_v7.png);
 }
 #row_container_1{
-    margin-top: -850px;
+    margin-top: 10px;
 }
 span{
     float: bottom;

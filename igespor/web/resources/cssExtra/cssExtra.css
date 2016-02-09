@@ -57,6 +57,11 @@ span{
 {
     position: relative; margin-top: -270px; display: none;
 }
+
+.duyurular{
+    background-color: whitesmoke;
+    margin-top: 2px;
+}
 @media only screen and (min-width: 100px) {
 
     #img_serkan{

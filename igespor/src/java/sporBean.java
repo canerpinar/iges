@@ -93,8 +93,8 @@ public class sporBean implements Serializable{
             {                    
                      try {
                          content = new String(Files.readAllBytes(Paths.get(realPath+"resources/satranc.txt")));
-                         graphic_1="satranc_1.jpg";
-                         graphic_2="satranc_2.jpg";
+                         graphic_1="/satranc/_DSC0021.JPG";
+                         graphic_2="/satranc/_DSC0033.JPG";
                          return content;
                      } catch (IOException ex) {
                          Logger.getLogger(sporBean.class.getName()).log(Level.SEVERE, null, ex);

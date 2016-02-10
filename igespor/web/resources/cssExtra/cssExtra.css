@@ -12,12 +12,13 @@ body,html{
  
 
   height: 100%;
-  background-color: #908c96;
+  //background-color: #908c96;
  
 }
 #header{
     
     background-image: url(images/background_v7.png);
+
 }
 #row_container_1{
     margin-top: 10px;
@@ -55,7 +56,7 @@ span{
 
 #img_serkan
 {
-    position: relative; margin-top: -270px; display: none;
+ display: none;
 }
 
 .duyurular{
@@ -66,7 +67,7 @@ span{
 
     #img_serkan{
         visibility: hidden;
-        margin-top: -330px;
+        margin-top: -150px;
     }
     
     #duyurular{
@@ -78,7 +79,8 @@ span{
 
     #img_serkan{
         visibility: visible;
-        margin-top: -270px;
+
+        margin-top: -190px;
     }
     
     #duyurular{

@@ -13,3 +13,10 @@ function mouseUp() {
 function mouseout(){
     document.getElementById("img_serkan").style.display = "none";
 }
+function mouseUpYuzme() {
+   
+    document.getElementById("img_serkan_trans").style.display = "block";
+}
+function mouseoutYuzme(){
+    document.getElementById("img_serkan_trans").style.display = "none";
+}

@@ -17,7 +17,23 @@
         <h:outputStylesheet library="cssExtra" name="cssSlider.css" />
         <h:outputScript library="js" name="jsOthers.js" />
         
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : 'your-app-id',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
 
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
         
     </h:head>
     <h:body>
@@ -32,14 +48,28 @@
                 <div class="col-md-2 col-xs-2 col-lg-2">
                     <h:link outcome="index.xhtml"><img src="/igespor/resources/images/iges_logo_4.png" /></h:link>
                 </div>
-            <div class="col-md-4" onmousemove="mouseUp()" onmouseout="mouseout()">
+            <div class="col-md-4">
+                <div  onmousemove="mouseUp()" onmouseout="mouseout()" style="width: 250px; margin:0 auto;">
                 <img src="/igespor/resources/images/image_serkan_laplace.png" width="250"></img>
                 <img src="/igespor/resources/images/image_serkan_trans.png" width="250" id="img_serkan"/>
+                </div>
+                
             </div>
-            <div class="col-md-4 col-xs-4 col-lg-4"><img src="/igespor/resources/images/iges_yuzme_ekibi_laplace.png" width="250" /></div>
+            <div class="col-md-4 col-xs-4 col-lg-4">
+                <div   onmousemove="mouseUpYuzme()()" onmouseout="mouseoutYuzme()()" style="width: 250px; margin:0 auto;"> 
+                    <img src="/igespor/resources/images/iges_yuzme_ekibi_laplace.png" width="250" />
+                    <img src="/igespor/resources/images/iges_yuzme_ekibi_trans.png" width="250" id="img_serkan_trans" />
+                </div>
+                
+            </div>
             
-                <div class="col-md-1 col-xs-1 col-lg-1"><a href=""><img src="/igespor/resources/images/facebook.png" width="50" height="50"/></a></div>
-                <div class="col-md-1 col-xs-1 col-lg-1"><a href=""><img src="/igespor/resources/images/twitter.png" width="50" height="50"/></a></div>                  
+            <div class="col-md-1 col-xs-1 col-lg-1">
+                
+                <div class="fb-page" data-href="https://www.facebook.com/Igesspor-1445655882430088/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+                
+                
+            </div>
+                <div class="col-md-1 col-xs-1 col-lg-1"><a href="">twitter</a></div>                  
         </div>
     </div>  
 </div>

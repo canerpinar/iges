@@ -59,6 +59,11 @@ span{
  display: none;
 }
 
+#img_serkan_trans
+{
+ display: none;
+}
+
 .duyurular{
     background-color: whitesmoke;
     margin-top: 2px;
@@ -66,6 +71,11 @@ span{
 @media only screen and (min-width: 100px) {
 
     #img_serkan{
+        visibility: hidden;
+        margin-top: -150px;
+    }
+    
+    #img_serkan_trans{
         visibility: hidden;
         margin-top: -150px;
     }
@@ -79,10 +89,12 @@ span{
 
     #img_serkan{
         visibility: visible;
-
         margin-top: -190px;
     }
-    
+    #img_serkan_trans{
+        visibility: visible;
+        margin-top: -190px;
+    }
     #duyurular{
     background-color: yellowgreen;    
     }

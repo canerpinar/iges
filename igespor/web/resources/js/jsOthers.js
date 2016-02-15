@@ -20,3 +20,23 @@ function mouseUpYuzme() {
 function mouseoutYuzme(){
     document.getElementById("img_serkan_trans").style.display = "none";
 }
+$(document).ready(function (){
+    
+
+    
+    $("#hareket").animate({
+
+				marginLeft:"300px"
+
+			},500).animate({
+
+				marginTop:"100px",
+
+				width:"200px"
+
+			},1000);
+
+			
+
+    
+});

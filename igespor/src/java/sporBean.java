@@ -1,6 +1,7 @@
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.logging.Level;
@@ -93,6 +94,7 @@ public class sporBean implements Serializable{
             {                    
                      try {
                          content = new String(Files.readAllBytes(Paths.get(realPath+"resources/satranc.txt")));
+                         Charset.forName("UTF-8").encode(content);
                          graphic_1="/satranc/_DSC0021.JPG";
                          graphic_2="/satranc/_DSC0033.JPG";
                          return content;
@@ -105,6 +107,7 @@ public class sporBean implements Serializable{
             {                    
                      try {
                          content = new String(Files.readAllBytes(Paths.get(realPath+"resources/futsa.txt")));
+                         Charset.forName("UTF-8").encode(content);
                          graphic_1="futsal_1.jpg";
                          graphic_2="futsal_2.jpg";
                          return content;
@@ -117,6 +120,7 @@ public class sporBean implements Serializable{
             {                    
                      try {
                          content = new String(Files.readAllBytes(Paths.get(realPath+"resources/judo.txt")));
+                         Charset.forName("UTF-8").encode(content);
                          graphic_1="judo_1.jpg";
                          graphic_2="judo_2.jpg";
                          return content;

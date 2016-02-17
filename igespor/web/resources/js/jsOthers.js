@@ -26,17 +26,27 @@ $(document).ready(function (){
     
     $("#hareket").animate({
 
-				marginLeft:"300px"
+				
 
 			},500).animate({
 
-				marginTop:"100px",
+				marginTop:"10px",
 
 				width:"200px"
 
 			},1000);
 
-			
+    $("#hareket_2").animate({
+
+				
+
+			},500).animate({
+
+				marginTop:"10px",
+
+				width:"200px"
+
+			},1000);			
 
     
 });

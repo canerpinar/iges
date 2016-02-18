@@ -1,6 +1,7 @@
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -69,7 +70,7 @@ public class sporBean implements Serializable{
             case 1:
             {                    
                      try {
-                         content = new String(Files.readAllBytes(Paths.get(realPath+"resources/golbol.txt")));
+                         content = new String(Files.readAllBytes(Paths.get(realPath+"resources/golbol.txt")),"UTF-8");
                          graphic_1="golbol_1.jpg";
                          graphic_2="golbol_2.jpg";
                          return content;
@@ -81,7 +82,7 @@ public class sporBean implements Serializable{
             case 2:
             {                    
                      try {
-                         content = new String(Files.readAllBytes(Paths.get(realPath+"resources/yuzme.txt")));
+                         content = new String(Files.readAllBytes(Paths.get(realPath+"resources/yuzme.txt")),"UTF-8");
                          graphic_1="yuzme_1.jpg";
                          graphic_2="yuzme_2.jpg";
                          return content;
@@ -93,8 +94,8 @@ public class sporBean implements Serializable{
             case 3:
             {                    
                      try {
-                         content = new String(Files.readAllBytes(Paths.get(realPath+"resources/satranc.txt")));
-                         Charset.forName("UTF-8").encode(content);
+                         content = new String(Files.readAllBytes(Paths.get(realPath+"resources/satranc.txt")),"UTF-8");                     
+                         
                          graphic_1="/satranc/_DSC0021.JPG";
                          graphic_2="/satranc/_DSC0033.JPG";
                          return content;
@@ -106,7 +107,7 @@ public class sporBean implements Serializable{
             case 4:
             {                    
                      try {
-                         content = new String(Files.readAllBytes(Paths.get(realPath+"resources/futsa.txt")));
+                         content = new String(Files.readAllBytes(Paths.get(realPath+"resources/futsa.txt")),"UTF-8");
                          Charset.forName("UTF-8").encode(content);
                          graphic_1="futsal_1.jpg";
                          graphic_2="futsal_2.jpg";
@@ -119,7 +120,7 @@ public class sporBean implements Serializable{
             case 5:
             {                    
                      try {
-                         content = new String(Files.readAllBytes(Paths.get(realPath+"resources/judo.txt")));
+                         content = new String(Files.readAllBytes(Paths.get(realPath+"resources/judo.txt")),"UTF-8");
                          Charset.forName("UTF-8").encode(content);
                          graphic_1="judo_1.jpg";
                          graphic_2="judo_2.jpg";

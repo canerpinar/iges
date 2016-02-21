@@ -19,7 +19,7 @@
             <div class="form-group">
                  <label for="inputEmail3" class="col-sm-3 control-label">AD :</label>
                  <div class="col-sm-5">
-                     <h:inputText id="ad" class="form-control"  required="true" requiredMessage="Boş bırakılamaz"/>
+                     <h:inputText id="ad" class="form-control" value="#{iletisimBean.ad}"  required="true" requiredMessage="Boş bırakılamaz"/>
                  </div>
                  <div class="col-sm-4">
                      <h:message for="ad" style="color:red"/>
@@ -29,7 +29,7 @@
             <div class="form-group">
                  <label for="inputPassword3" class="col-sm-3 control-label">SOYAD :</label>
                  <div class="col-sm-5">
-                     <h:inputText id="soyad" class="form-control" required="true" requiredMessage="Boş bırakılamaz"/>
+                     <h:inputText id="soyad" value="#{iletisimBean.soyad}" class="form-control" required="true" requiredMessage="Boş bırakılamaz"/>
                  </div>
                  <div class="col-sm-4">
                      <h:message for="soyad" style="color:red"/>
@@ -39,7 +39,7 @@
             <div class="form-group">
                 <label for="inputPassword3" class="col-sm-3 control-label">EMAİL :</label>
                 <div class="col-sm-5">
-                    <h:inputText id="email" class="form-control" required="true" requiredMessage="Boş bırakılamaz"/>
+                    <h:inputText id="email" value="#{iletisimBean.email}" class="form-control" required="true" requiredMessage="Boş bırakılamaz"/>
                 </div> 
                 <div class="col-sm-4">
                      <h:message for="email" style="color:red"/>
@@ -49,12 +49,12 @@
             <div class="form-group">
                 <label class="col-sm-3 control-label">BAŞLIK :</label>
                 <div class="col-sm-9">
-                    <h:selectOneMenu>
-                           <f:selectItem itemValue="English" itemLabel="GOLBOL" />
-                           <f:selectItem itemValue="Turkish" itemLabel="YÜZME" />
-                           <f:selectItem itemValue="Italian" itemLabel="SATRANÇ" />
-                           <f:selectItem itemValue="Italian" itemLabel="FUTSA" />
-                           <f:selectItem itemValue="Italian" itemLabel="DİĞER" />                           
+                    <h:selectOneMenu value="#{iletisimBean.baslik}">
+                           <f:selectItem itemValue="golbol" itemLabel="GOLBOL" />
+                           <f:selectItem itemValue="yuzme" itemLabel="YÜZME" />
+                           <f:selectItem itemValue="satranc" itemLabel="SATRANÇ" />
+                           <f:selectItem itemValue="futsa" itemLabel="FUTSA" />
+                           <f:selectItem itemValue="diger" itemLabel="DİĞER" />                           
                            
                    </h:selectOneMenu>
                 </div>                 
@@ -64,7 +64,7 @@
             <div class="form-group">
                 <label class="col-sm-3 control-label">AÇIKLAMA :</label>
                 <div class="col-sm-5">
-                    <h:inputTextarea id="aciklama" value="" class="form-control" required="true" requiredMessage="Boş bırakılamaz"/>
+                    <h:inputTextarea id="aciklama" value="#{iletisimBean.aciklama}" class="form-control" required="true" requiredMessage="Boş bırakılamaz"/>
                 </div> 
                <div class="col-sm-4">
                      <h:message for="aciklama" style="color:red"/>
@@ -76,7 +76,7 @@
             <div class="form-group">
                 
                 <div class="col-sm-12">
-                    <h:commandButton value="GÖNDER" style="width: 100%; margin: 0 auto;" />
+                    <h:commandButton value="GÖNDER" style="width: 100%; margin: 0 auto;" action="#{iletisimBean.save()}" />
                 </div>                 
             </div>
         

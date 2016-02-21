@@ -21,8 +21,10 @@ function mouseoutYuzme(){
     document.getElementById("img_serkan_trans").style.display = "none";
 }
 $(document).ready(function (){
-    
+    //21.02.2016 çalışmıyor kayıt gerçekleştiğinde bu mesaj olacak
+    var deger=$("input:hidden").attr("value");//kaydınız başarılı mesajı vermek
 
+alert(deger);
     
     $("#hareket").animate({
 

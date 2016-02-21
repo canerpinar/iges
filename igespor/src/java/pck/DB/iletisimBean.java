@@ -68,6 +68,17 @@ public class iletisimBean {
         this.aciklama = aciklama;
     }
     
+    private static boolean alertMessage;
+
+    public boolean isAlertMessage() {
+        return alertMessage;
+    }
+
+    public void setAlertMessage(boolean alertMessage) {
+        this.alertMessage = alertMessage;
+    }
+    
+    
     public String save(){
         
         try {
@@ -102,6 +113,7 @@ public class iletisimBean {
             email="";
             baslik="";
             aciklama="";
+            alertMessage=true;//kaydınız başarılı mesajının geçerli olması için
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(iletisimBean.class.getName()).log(Level.SEVERE, null, ex);

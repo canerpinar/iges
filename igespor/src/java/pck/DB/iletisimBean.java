@@ -14,6 +14,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
+import javax.faces.component.UIViewRoot;
+import javax.faces.context.FacesContext;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -24,7 +27,7 @@ import javax.sql.DataSource;
  * @author caner
  */
 @ManagedBean(name = "iletisimBean")
-@RequestScoped
+@SessionScoped
 public class iletisimBean {
     private String ad,soyad,email,baslik,aciklama;
 
@@ -68,17 +71,17 @@ public class iletisimBean {
         this.aciklama = aciklama;
     }
     
-    private static boolean alertMessage;
+    private String alertMessage;
 
-    public boolean isAlertMessage() {
+    public String getAlertMessage() {
         return alertMessage;
+        
     }
 
-    public void setAlertMessage(boolean alertMessage) {
+    public void setAlertMessage(String alertMessage) {
         this.alertMessage = alertMessage;
     }
-    
-    
+      
     public String save(){
         
         try {
@@ -96,7 +99,6 @@ public class iletisimBean {
             statement.execute();
             connection.close();
             */        
-            
             Class.forName("com.mysql.jdbc.Driver");
             Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/igesDB?useUnicode=true&characterEncoding=utf-8","root","3772391Caner%");
             PreparedStatement statement=connection.prepareStatement("insert into istekler(ad,soyad,email,baslik,aciklama) values(?,?,?,?,?)");
@@ -113,13 +115,14 @@ public class iletisimBean {
             email="";
             baslik="";
             aciklama="";
-            alertMessage=true;//kaydınız başarılı mesajının geçerli olması için
-            
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(iletisimBean.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
+                alertMessage="Kaydınız başarıyla alınmıştır.";                
+                        
+        } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(iletisimBean.class.getName()).log(Level.SEVERE, null, ex);
         } 
-        return "faces/index.xhtml?faces-redirect=true";
+        return "faces/iletisim.xhtml?faces-redirect=true";
     }
+  
+
+
 }

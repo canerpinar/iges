@@ -20,6 +20,11 @@ and open the template in the editor.
           <view-id value="/faces/index.xhtml" />
     </url-mapping>
     
+    <url-mapping> 
+          <pattern value="/BASINMEDYA"/> 
+          <view-id value="/faces/basinmedya.xhtml" />
+    </url-mapping>
+    
     <url-mapping id="blog">
         <pattern value="/HAKKIMIZDA"/>
         <view-id value="/faces/hakkimizda.xhtml"/>
@@ -45,5 +50,9 @@ and open the template in the editor.
         <pattern value="/SPOR/#{spor}"/>
         <view-id value="/faces/spor.xhtml"/> 
     </url-mapping>   
-            
+                   
+    <url-mapping>
+        <pattern value="/YORUMLAR"/>
+        <view-id value="/faces/istek.xhtml"/> 
+    </url-mapping>                  
 </pretty-config>

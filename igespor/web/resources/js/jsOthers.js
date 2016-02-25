@@ -20,13 +20,15 @@ function mouseUpYuzme() {
 function mouseoutYuzme(){
     document.getElementById("img_serkan_trans").style.display = "none";
 }
+
+
 $(document).ready(function (){
     //21.02.2016 çalışmıyor kayıt gerçekleştiğinde bu mesaj olacak
-    var deger=$("input:hidden").attr("value");//kaydınız başarılı mesajı vermek
+    //var deger=$("input:hidden").attr("value");//kaydınız başarılı mesajı vermek
 
-alert(deger);
-    
-    $("#hareket").animate({
+//alert(deger);
+   
+    $("#hareket_1").animate({
 
 				
 
@@ -37,8 +39,44 @@ alert(deger);
 				width:"200px"
 
 			},1000);
-
+                        
     $("#hareket_2").animate({
+
+				
+
+			},500).animate({
+
+				marginTop:"10px",
+
+				width:"200px"
+
+			},1000);  
+                        
+    $("#hareket_3").animate({
+
+				
+
+			},500).animate({
+
+				marginTop:"10px",
+
+				width:"200px"
+
+			},1000);
+                        
+    $("#hareket_4").animate({
+
+				
+
+			},500).animate({
+
+				marginTop:"10px",
+
+				width:"200px"
+
+			},1000);
+                        
+    $("#hareket_5").animate({
 
 				
 
@@ -50,5 +88,7 @@ alert(deger);
 
 			},1000);			
 
+ 
+    
     
 });

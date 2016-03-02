@@ -16,4 +16,5 @@ public interface DBImp {
     List getWantAll();
     void saveIletisim();
     List getIletisimAll();
+    void closeDB();
 }

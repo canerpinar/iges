@@ -9,18 +9,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
-import javax.faces.component.UIViewRoot;
 import javax.faces.context.FacesContext;
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-import javax.sql.DataSource;
 
 /**
  *
@@ -29,7 +25,23 @@ import javax.sql.DataSource;
 @ManagedBean(name = "iletisimBean")
 @SessionScoped
 public class iletisimBean {
-    private String ad,soyad,email,baslik,aciklama;
+    private String ad,soyad,email,baslik,aciklama,securitCode,securityControl;
+
+    public String getSecurityControl() {
+        return securityControl;
+    }
+
+    public void setSecurityControl(String securityControl) {
+        this.securityControl = securityControl;
+    }
+
+    public String getSecuritCode() {
+        return securitCode;
+    }
+
+    public void setSecuritCode(String securitCode) {
+        this.securitCode = securitCode;
+    }
 
     public String getAd() {
         return ad;
@@ -71,6 +83,8 @@ public class iletisimBean {
         this.aciklama = aciklama;
     }
     
+
+    
     private String alertMessage;
 
     public String getAlertMessage() {
@@ -82,6 +96,14 @@ public class iletisimBean {
         this.alertMessage = alertMessage;
     }
       
+    
+    @PostConstruct
+    public void init(){
+        securitCode="";//kodu boşalt yeni üret
+        securityCode();
+       
+    }
+    
     public String save(){
         
         try {
@@ -98,9 +120,18 @@ public class iletisimBean {
             statement.setString(5, aciklama);
             statement.execute();
             connection.close();
-            */        
+            */      
+            if(!FacesContext.getCurrentInstance().isPostback()){
+                FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+            }
+            else
+            {
+                alertMessage="";
+            }
+            
+            if(securitCode.equals(securityControl)){
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/igesDB?useUnicode=true&characterEncoding=utf-8","root","3772391Caner%");
+            Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/igesdb?useUnicode=true&characterEncoding=utf-8","root","306061989");
             PreparedStatement statement=connection.prepareStatement("insert into istekler(ad,soyad,email,baslik,aciklama) values(?,?,?,?,?)");
             statement.setString(1, ad);
             statement.setString(2, soyad);
@@ -109,20 +140,47 @@ public class iletisimBean {
             statement.setString(5, aciklama);
             statement.execute();
             connection.close();
-                    
             ad="";
             soyad="";
             email="";
             baslik="";
             aciklama="";
-                alertMessage="Kaydınız başarıyla alınmıştır.";                
-                        
+            securityControl="";
+            alertMessage="Kayıt işlemi başarıyla gerçekleşti";
+            return "faces/iletisim.xhtml?faces-redirect=true";
+            }else{
+                FacesContext.getCurrentInstance().addMessage("iletisimForm:guvenlik", new FacesMessage("Güvenlik Kodu Yanlış"));
+            }
+           
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(iletisimBean.class.getName()).log(Level.SEVERE, null, ex);
         } 
-        return "faces/iletisim.xhtml?faces-redirect=true";
+        return "";
     }
   
 
+    public String securityCode(){
+        String deger="";
+        char[] character={'a','b','c','d','e','f','g','h','ı','i','j','k','l','m','n','o','ö','p','r','s','ş','t','u','ü'
+        ,'v','y','z','x'
+        };
+        Random rnd = new Random();
+        
+        
+        for(int s=0;s<6;s++){
+           deger=deger.concat(String.valueOf(character[rnd.nextInt(27)]));
+           
+           if(s==2){
+               
+               for(int k=0;k<2;k++){
+                   deger=deger.concat(String.valueOf(rnd.nextInt(10)));
+               }
+           }
+           
+           
+        }
+        securitCode=deger;       
+        return deger;
+    }
 
 }

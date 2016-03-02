@@ -5,7 +5,16 @@
  */
 package pck.DB;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import pck.Entity.Istekler;
 
 /**
  *
@@ -13,26 +22,64 @@ import java.util.List;
  */
 public class DAO implements DBImp{
 
-    
+    private Connection connection=null;
+    public DAO(){
+        
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/igesdb?useUnicode=true&characterEncoding=utf-8","root","06061989");
+        } catch (SQLException ex) {
+            Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
     @Override
     public void saveWant() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override
     public List getWantAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return null;
+        
     }
 
     @Override
     public void saveIletisim() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override
     public List getIletisimAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<Istekler> listIstekler=new ArrayList<>();
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet resultSet=statement.executeQuery("select ad,soyad,email,aciklama from istekler");
+            
+            while(resultSet.next()){
+                Istekler istekler=new Istekler();
+                istekler.setAd(resultSet.getString(1));
+                istekler.setSoyad(resultSet.getString(2));
+                istekler.setEmail(resultSet.getString(3));
+                istekler.setAciklama(resultSet.getString(4));
+                listIstekler.add(istekler);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return listIstekler;
+    
+    }
+
+    @Override
+    public void closeDB() {
+        try {
+            connection.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }

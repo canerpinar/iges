@@ -12,10 +12,10 @@
             <ui:define name="master">
 
                 <div class="container-fluid" style="font-size: large; font-weight: bold; margin-top: 15px;">
-                    <div class="row">#{iletisimBean.alertMessage}</div>
+                    <div class="row"><h:outputText value="#{iletisimBean.alertMessage}"/></div>
                 Sizi daha iyi anlayabilmek adına aşağıdaki formu doldurunuz.<br/>
                 İLETİŞİM FORMU
-    <h:form class="form-horizontal">
+                <h:form class="form-horizontal" id="iletisimForm">
             <div class="form-group">
                  <label for="inputEmail3" class="col-sm-3 control-label">AD :</label>
                  <div class="col-sm-5">
@@ -72,6 +72,19 @@
                 
             </div>
         
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Güvenlik Kodu :</label>
+                <div class="col-sm-5">
+                    <h:inputText id="guvenlik" value="#{iletisimBean.securityControl}" class="form-control" required="true" requiredMessage="Boş bırakılamaz"/>
+                    
+                </div>
+                
+                <div class="col-md-2" style="background-color: yellowgreen; width: 100px;"><div><h:commandButton value="Yenile" action="#{iletisimBean.securityCode()}" immediate="true"/></div><div style="color: green;">#{iletisimBean.securitCode}</div></div>
+               <div class="col-sm-4">
+                     <h:message for="guvenlik" style="color:red"/>
+                 </div>
+                
+            </div>    
         
             <div class="form-group">
                 
@@ -79,7 +92,7 @@
                     <h:commandButton value="GÖNDER" style="width: 100%; margin: 0 auto;" action="#{iletisimBean.save()}" />
                 </div>                 
             </div>
-        
+            
     </h:form>
                 </div> 
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.7577575214223!2d28.86819131541342!3d40.986784979302925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb57e3bad209%3A0x7c98644b462879b8!2zQmFrxLFyIFNrLiwgWnVodXJhdGJhYmEsIDM0MTQ3IEJha8SxcmvDtnkvxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1452627548743" width="500" height="450" frameborder="0" style="border-bottom-style: groove; margin-top: 15px;"></iframe><br/>

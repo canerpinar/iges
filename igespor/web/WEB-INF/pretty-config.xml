@@ -54,5 +54,11 @@ and open the template in the editor.
     <url-mapping>
         <pattern value="/YORUMLAR"/>
         <view-id value="/faces/istek.xhtml"/> 
-    </url-mapping>                  
+    </url-mapping>
+    
+                      
+    <url-mapping>
+        <pattern value="/ŞIKAYET"/>
+        <view-id value="/faces/dileksikayet.xhtml"/> 
+    </url-mapping>                     
 </pretty-config>

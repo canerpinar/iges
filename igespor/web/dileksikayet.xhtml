@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="resources/template.xhtml">
+            <ui:define name="master">
+            
+                <div style="margin: 0 auto;">
+                    <center>
+                        
+                    
+                    <h:dataTable value="#{sikayetBean.istekler}" var="istek">
+                        <h:column id="header">
+                            <div style="color:grey; text-decoration: underline;"><h:outputText value="#{istek.ad} diyor ki"/>
+                                <img src="/igespor/resources/images/dikkat_icon.png" width="20" style="margin-left: 10px; float: right;" />
+                            </div>
+                            <div style="border-radius: 20px; background-color: silver; margin-top: 10px;">
+                                <p style="text-indent: 20px; margin-left: 5px;">#{istek.aciklama}</p>
+                                
+                            </div>
+                        </h:column>
+                    </h:dataTable>     
+                        
+                        </center>
+                </div>
+                
+        
+                
+            </ui:define>
+            
+            
+        </ui:composition>
+        
+    </h:body>
+</html>
+

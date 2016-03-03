@@ -1,8 +1,6 @@
 
-import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
-import pck.DB.iletisimBean;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.

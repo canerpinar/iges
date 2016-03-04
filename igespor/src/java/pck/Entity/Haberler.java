@@ -15,7 +15,15 @@ import java.util.Date;
  */
 public class Haberler {
     private String baslik,icerik,resimPath;
-    private String tarih;
+    private String tarih,mainResim;
+
+    public String getMainResim() {
+        return mainResim;
+    }
+
+    public void setMainResim(String mainResim) {
+        this.mainResim = mainResim;
+    }
 
     public String getTarih() {
         return tarih;

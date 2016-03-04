@@ -13,7 +13,7 @@ import java.util.List;
  * @author caner
  */
 public interface DBImp {
-    void saveHaber(String baslik,String icerik,String imagesPath,String tarih);
+    void saveHaber(String baslik,String icerik,String imagesPath,String tarih,String mainResim);
     void saveWant();
     List getWantAll();
     void saveIletisim();

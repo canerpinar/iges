@@ -8,7 +8,7 @@
     <h:body>
         <h1>Admin Kontrol Panel</h1>
         
-        <h:form>
+        <h:form enctype="multipart/form-data">
             <h:panelGrid columns="2">
                 <h:outputText value="Haber Başlığı"/>
                 <h:inputText value="#{adminBean.haberler.baslik}" />
@@ -18,6 +18,11 @@
                 
                 <h:outputText value="Resim Klasör Adı"/>
                 <h:inputTextarea value="#{adminBean.haberler.resimPath}" />
+                
+                <h:outputText value="Anasayfa Resimi" />
+                <h:inputFile value="#{adminBean.file}" />
+                
+                <h:commandLink value="Resmi Kaydet" action="#{adminBean.upload()}" />
                 
                 <h:commandButton value="Kaydet" action="#{adminBean.saveHaber()}" />
             </h:panelGrid>

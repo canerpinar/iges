@@ -5,6 +5,7 @@
  */
 package pck.DB;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -12,6 +13,7 @@ import java.util.List;
  * @author caner
  */
 public interface DBImp {
+    void saveHaber(String baslik,String icerik,String imagesPath,String tarih);
     void saveWant();
     List getWantAll();
     void saveIletisim();

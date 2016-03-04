@@ -7,10 +7,12 @@ package pck.DB;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -39,7 +41,6 @@ public class DAO implements DBImp{
     public void saveWant() {
         
     }
-
     @Override
     public List getWantAll() {
         return null;
@@ -50,7 +51,6 @@ public class DAO implements DBImp{
     public void saveIletisim() {
         
     }
-
     @Override
     public List getIletisimAll() {
         List<Istekler> listIstekler=new ArrayList<>();
@@ -65,10 +65,12 @@ public class DAO implements DBImp{
                 istekler.setEmail(resultSet.getString(3));
                 istekler.setAciklama(resultSet.getString(4));
                 listIstekler.add(istekler);
+                statement.close();
             }
         } catch (SQLException ex) {
             Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         return listIstekler;
     
     }
@@ -81,5 +83,23 @@ public class DAO implements DBImp{
             Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
+    @Override
+    public void saveHaber(String baslik, String icerik, String imagesPath,String tarih) {
+        
+        try {
+            PreparedStatement statement=connection.prepareStatement("insert into haberler(baslik,icerik,resimpath,tarih) values(?,?,?,?)");
+            statement.setString(1, baslik);
+            statement.setString(2, icerik);
+            statement.setString(3, imagesPath);
+            statement.setString(4, tarih);
+            statement.execute();
+            statement.close();
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+ 
 }

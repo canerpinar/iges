@@ -22,10 +22,11 @@
                 <h:outputText value="Anasayfa Resimi" />
                 <h:inputFile value="#{adminBean.file}" />
                 
-                <h:commandLink value="Resmi Kaydet" action="#{adminBean.upload()}" />
-                
-                <h:commandButton value="Kaydet" action="#{adminBean.saveHaber()}" />
+                <h:commandLink value="Haberi Kaydet" action="#{adminBean.saveHaber()}" />
+                                                
             </h:panelGrid>
+            <h:outputText value="Eklenen habere alt resim eklemek istiyorum"/><h:inputFile value="#{adminBean.singleFile}" /><br/>
+            <h:commandLink value="Alt Resmi Kaydet" action="#{adminBean.uploadSingle()}" /><br/>
             <h:commandLink value="Oturumu Kapat" action="#{loginBean.logout()}" />
         </h:form>
         

@@ -131,7 +131,7 @@ public class iletisimBean {
             
             if(securitCode.equals(securityControl)){
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/igesdb?useUnicode=true&characterEncoding=utf-8","root","306061989");
+            Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/igesdb?useUnicode=true&characterEncoding=utf-8","root","3772391Caner%");
             PreparedStatement statement=connection.prepareStatement("insert into istekler(ad,soyad,email,baslik,aciklama) values(?,?,?,?,?)");
             statement.setString(1, ad);
             statement.setString(2, soyad);

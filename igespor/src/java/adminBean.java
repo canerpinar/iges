@@ -1,5 +1,6 @@
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.Part;
 import pck.DB.DAO;
@@ -26,10 +28,30 @@ import pck.Entity.Haberler;
  * @author caner
  */
 @ManagedBean
-@RequestScoped
+@SessionScoped
 public class adminBean {
     private Haberler haberler=new Haberler();
     private Part file;
+    private Part singleFile;
+    private int sayac=0;//upload edilen dosyalar için sayac.Eklenen dosyaların adına sayac numarası ekleniyor.
+    
+    public Part getSingleFile() {
+        return singleFile;
+    }
+
+    public void setSingleFile(Part singleFile) {
+        this.singleFile = singleFile;
+    }
+            
+    private static String resimpath;
+
+    public static String getResimpath() {
+        return resimpath;
+    }
+
+    public static void setResimpath(String resimpath) {
+        adminBean.resimpath = resimpath;
+    }
 
     public Part getFile() {
         return file;
@@ -47,8 +69,9 @@ public class adminBean {
         this.haberler = haberler;
     }
     
-    public void upload(){
-         InputStream inputStream = null;
+    
+    public void upload(Part file){
+        InputStream inputStream = null;
          String realPath=FacesContext.getCurrentInstance().getExternalContext().getRealPath("/");
          File folder=new File(realPath+haberler.getResimPath());
          folder.canWrite();
@@ -82,16 +105,50 @@ public class adminBean {
             } catch (IOException ex) {
                 Logger.getLogger(adminBean.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }
-  
-    
+        }        
     }
+    
+    
     public void saveHaber(){
         DAO dao=new DAO();
         SimpleDateFormat bicim=new SimpleDateFormat("dd/M/yyyy");
         Date tarih=new Date();
-        haberler.setTarih(bicim.format(tarih));        
-        dao.saveHaber(haberler.getBaslik(), haberler.getIcerik(), haberler.getResimPath(),haberler.getTarih(),haberler.getMainResim());
-        haberler=new Haberler();
+        haberler.setTarih(bicim.format(tarih));
+        haberler.setMainResim("main.jpg");
+        upload(this.file);
+        dao.saveHaber(haberler.getBaslik(), haberler.getIcerik(), haberler.getResimPath(), haberler.getTarih(), haberler.getMainResim());        
+        resimpath=haberler.getResimPath();
+        haberler=new Haberler();        
     }
+    
+    public void uploadSingle(){
+        sayac++;
+        InputStream inputStream=null;
+        String realPath=FacesContext.getCurrentInstance().getExternalContext().getRealPath("/")+"/"+resimpath+"/"+singleFile.getName()+String.valueOf(sayac);
+        try {
+            FileOutputStream outputStream=new FileOutputStream(realPath);
+            inputStream=singleFile.getInputStream();
+            byte[] buffer=new byte[4096];
+            int byteRead=0;
+            while(true){
+                byteRead=inputStream.read(buffer);
+                if(byteRead>0){
+                    outputStream.write(buffer, 0, byteRead);
+                }
+                
+                else break;
+            }
+            inputStream.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(adminBean.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(adminBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+          
+    }
+    
+    
+      
+
 }

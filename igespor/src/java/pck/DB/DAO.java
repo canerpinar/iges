@@ -85,15 +85,16 @@ public class DAO implements DBImp{
     }
 
     @Override
-    public void saveHaber(String baslik, String icerik, String imagesPath,String tarih,String mainResim) {
+    public void saveHaber(String baslik, String icerik, String imagesPath,String tarih,String mainResim,String haberLink) {
         
         try {
-            PreparedStatement statement=connection.prepareStatement("insert into haberler(baslik,icerik,resimpath,tarih,mainresim) values(?,?,?,?,?)");
+            PreparedStatement statement=connection.prepareStatement("insert into haberler(baslik,icerik,resimpath,tarih,mainresim,link) values(?,?,?,?,?)");
             statement.setString(1, baslik);
             statement.setString(2, icerik);
             statement.setString(3, imagesPath);
             statement.setString(4, tarih);
             statement.setString(5, mainResim);
+            statement.setString(6, haberLink);
             statement.execute();
             statement.close();
             

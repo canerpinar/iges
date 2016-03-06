@@ -116,7 +116,7 @@ public class adminBean {
         haberler.setTarih(bicim.format(tarih));
         haberler.setMainResim("main.jpg");
         upload(this.file);
-        dao.saveHaber(haberler.getBaslik(), haberler.getIcerik(), haberler.getResimPath(), haberler.getTarih(), haberler.getMainResim());        
+        dao.saveHaber(haberler.getBaslik(), haberler.getIcerik(), haberler.getResimPath(), haberler.getTarih(), haberler.getMainResim(),haberler.getLink());        
         resimpath=haberler.getResimPath();
         dao.closeDB();        
         haberler=new Haberler();        

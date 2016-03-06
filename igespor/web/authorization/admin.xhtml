@@ -21,10 +21,13 @@
                 <h:inputText value="#{adminBean.haberler.baslik}" />
                 
                 <h:outputText value="Haber İçeriği"/>
-                <h:inputTextarea value="#{adminBean.haberler.icerik}" />
+                <h:inputTextarea cols="40" rows="10" value="#{adminBean.haberler.icerik}" />
                 
                 <h:outputText value="Resim Klasör Adı"/>
-                <h:inputTextarea value="#{adminBean.haberler.resimPath}" />
+                <h:inputText value="#{adminBean.haberler.resimPath}" />
+                
+                <h:outputText value="Haber Linki"/>
+                <h:inputText value="#{adminBean.haberler.link}" />
                 
                 <h:outputText value="Anasayfa Resimi" />
                 <h:inputFile value="#{adminBean.file}" />

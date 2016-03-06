@@ -60,5 +60,11 @@ and open the template in the editor.
     <url-mapping>
         <pattern value="/ŞIKAYET"/>
         <view-id value="/faces/dileksikayet.xhtml"/> 
-    </url-mapping>                     
+    </url-mapping> 
+    
+    <url-mapping>
+        <pattern value="/HABERLER/#{link}/"/>
+        <view-id value="/faces/haberler.xhtml"/> 
+    </url-mapping> 
+                                            
 </pretty-config>

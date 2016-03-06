@@ -33,6 +33,10 @@ public class indexBean {
         this.listHaberler = listHaberler;
     }
     
+    public String getHaberLink(Haberler haber){        
+        return "/faces/haberler.xhtml?faces-redirect=true"+"&link="+haber.getLink();
+    }
+    
     @PostConstruct
     public void init(){
         DAO dao=new DAO();

@@ -117,21 +117,21 @@
                 
                 
         <div class="container-fluid" style=" border-radius: 10px; margin-top: 5px;">
-                    
-            <h:dataTable value="#{indexBean.listHaberler}" var="haber">
-                <h:column id="header">
-                    <div class="container-fluid" style="margin-top: 35px; background-color: whitesmoke; border-radius: 10px;">
-                        <div class="row" style=" margin-bottom: 5px;"><a href="#" target="_blank">
-                                <div class="col-md-6"><img src="/igespor/#{haber.resimPath}/#{haber.mainResim}" class="img-responsive img-circle"  style="margin-top: 5px; height: 200px;"/></div>
-                            <div class="col-md-6" style="font-size: large;">#{haber.baslik}</div>
-                            <div style="margin-top: 80px; float: right; width: 20%;">#{haber.tarih}</div>                        
-                            </a>
-                        </div>                                        
-                    </div>  
-                    <div class="row seperator"></div>
-                </h:column>
-            </h:dataTable>
-     
+            <h:form>
+                <h:dataTable value="#{indexBean.listHaberler}" var="haber">
+                    <h:column id="header">
+                        <div class="container-fluid" style="margin-top: 35px; background-color: whitesmoke; border-radius: 10px;">
+                            <div class="row" style=" margin-bottom: 5px;"><h:commandLink action="#{indexBean.getHaberLink(haber)}">
+                                    <div class="col-md-6"><img src="/igespor/#{haber.resimPath}/#{haber.mainResim}" class="img-responsive img-circle"  style="margin-top: 5px; height: 200px;"/></div>
+                                <div class="col-md-6" style="font-size: large;">#{haber.baslik}</div>
+                                <div style="margin-top: 80px; float: right; width: 20%;">#{haber.tarih}</div>                        
+                                </h:commandLink>
+                            </div>                                        
+                        </div>  
+                        <div class="row seperator"></div>
+                    </h:column>
+                </h:dataTable>
+            </h:form>        
         </div>
 
                 

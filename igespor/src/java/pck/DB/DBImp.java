@@ -16,6 +16,7 @@ import pck.Entity.Haberler;
 public interface DBImp {
     List<Haberler> getHaberler();
     void saveHaber(String baslik,String icerik,String imagesPath,String tarih,String mainResim);
+    Haberler getHaber(String link);
     void saveWant();
     List getWantAll();
     void saveIletisim();

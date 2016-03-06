@@ -107,23 +107,49 @@ public class DAO implements DBImp{
         List<Haberler> listHaberler=new ArrayList<>();
         try {
             Statement statement=connection.createStatement();
-            ResultSet resultSet=statement.executeQuery("select baslik,icerik,resimpath,tarih,mainresim from haberler");
+            ResultSet resultSet=statement.executeQuery("select id,baslik,icerik,resimpath,tarih,mainresim,link from haberler");
             while(resultSet.next()){
                 Haberler haberler=new Haberler();
-                haberler.setBaslik(resultSet.getString(1));
-                haberler.setIcerik(resultSet.getString(2));
-                haberler.setResimPath(resultSet.getString(3));
-                haberler.setTarih(resultSet.getString(4));
-                haberler.setMainResim(resultSet.getString(5));
+                haberler.setId(resultSet.getString(1));
+                haberler.setBaslik(resultSet.getString(2));
+                haberler.setIcerik(resultSet.getString(3));
+                haberler.setResimPath(resultSet.getString(4));
+                haberler.setTarih(resultSet.getString(5));
+                haberler.setMainResim(resultSet.getString(6));
+                haberler.setLink(resultSet.getString(7));
                 listHaberler.add(haberler);
             }            
             resultSet.close();
             statement.close();
         } catch (SQLException ex) {
             Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+        }        
         return listHaberler;
+    }
+
+    @Override
+    public Haberler getHaber(String link) {
+        Statement statement = null;
+        try {
+            statement = connection.createStatement();
+        } catch (SQLException ex) {
+            Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Haberler haber=new Haberler();
+        try {
+            ResultSet resultSet=statement.executeQuery("select baslik,icerik,resimpath,tarih from haberler where link='"+link+"'");
+            resultSet.next();
+            
+            haber.setBaslik(resultSet.getString(1));
+            haber.setIcerik(resultSet.getString(2));
+            haber.setResimPath(resultSet.getString(3));
+            haber.setTarih(resultSet.getString(4));
+            resultSet.close();
+            statement.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return haber;
     }
 
  

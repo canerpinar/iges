@@ -1,5 +1,12 @@
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
+import pck.DB.DAO;
+import pck.Entity.Haberler;
 
 
 /*
@@ -13,7 +20,24 @@ import javax.faces.bean.ManagedBean;
  * @author caner
  */
 @ManagedBean(name = "indexBean")
+@RequestScoped
 public class indexBean {
     
+    private List<Haberler> listHaberler;
+
+    public List<Haberler> getListHaberler() {
+        return listHaberler;
+    }
+
+    public void setListHaberler(List<Haberler> listHaberler) {
+        this.listHaberler = listHaberler;
+    }
+    
+    @PostConstruct
+    public void init(){
+        DAO dao=new DAO();
+        listHaberler=dao.getHaberler();
+        dao.closeDB();                
+    }
     
 }

@@ -7,12 +7,14 @@ package pck.DB;
 
 import java.util.Date;
 import java.util.List;
+import pck.Entity.Haberler;
 
 /**
  *
  * @author caner
  */
 public interface DBImp {
+    List<Haberler> getHaberler();
     void saveHaber(String baslik,String icerik,String imagesPath,String tarih,String mainResim);
     void saveWant();
     List getWantAll();

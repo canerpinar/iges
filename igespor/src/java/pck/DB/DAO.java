@@ -12,10 +12,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import pck.Entity.Haberler;
 import pck.Entity.Istekler;
 
 /**
@@ -100,6 +100,30 @@ public class DAO implements DBImp{
         } catch (SQLException ex) {
             Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    @Override
+    public List<Haberler> getHaberler() {
+        List<Haberler> listHaberler=new ArrayList<>();
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet resultSet=statement.executeQuery("select baslik,icerik,resimpath,tarih,mainresim from haberler");
+            while(resultSet.next()){
+                Haberler haberler=new Haberler();
+                haberler.setBaslik(resultSet.getString(1));
+                haberler.setIcerik(resultSet.getString(2));
+                haberler.setResimPath(resultSet.getString(3));
+                haberler.setTarih(resultSet.getString(4));
+                haberler.setMainResim(resultSet.getString(5));
+                listHaberler.add(haberler);
+            }            
+            resultSet.close();
+            statement.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return listHaberler;
     }
 
  

@@ -4,13 +4,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.Part;
@@ -34,6 +32,8 @@ public class adminBean {
     private Part file;
     private Part singleFile;
     private int sayac=0;//upload edilen dosyalar için sayac.Eklenen dosyaların adına sayac numarası ekleniyor.
+    
+
     
     public Part getSingleFile() {
         return singleFile;
@@ -148,6 +148,7 @@ public class adminBean {
           
     }
     
+        
     
       
 

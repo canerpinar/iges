@@ -105,6 +105,11 @@ span{
     #gpdpLogo{
          width: 320px;
     }
+    #gpdpDestek{
+        background-color: silver;
+        margin-top: 10px;
+        box-shadow: 0 0 25px #7d7163;
+    }
     
 }
 
@@ -157,5 +162,12 @@ span{
 }
     #gpdpLogo{
          width: 24%;
+    }
+    
+    #gpdpDestek{
+        background-color: silver;
+        margin-top: 10px;
+        width: 290px;
+        border-radius: 10px;
     }
 }

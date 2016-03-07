@@ -23,7 +23,7 @@
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
     <li data-target="#carousel-example-generic" data-slide-to="3"></li>
     <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+
   </ol>
 
   <!-- Wrapper for slides
@@ -56,11 +56,11 @@
       <div class="carousel-caption">
           
       </div>
-         <center> <span style="font-size: medium; color: black;">28-29 Şubat Judo Turnuvasında yarışmacılara başarılar.</span></center>
+          <center> <span style="font-size: medium; color: black;">28-29 Şubat Judo Turnuvasında yarışmacılara başarılar.</span></center>
           
     </div>
     <div class="item item_Extra">
-        <h:link outcome="faces/index.xhtml"><img src="/igespor/resources/images/afis_gsb.jpg" alt="Bakalım bundan sonrası" style="width: 90%; height: 250px;  margin: 0 auto;"/></h:link>
+        <h:link outcome="faces/index.xhtml"><img src="/igespor/resources/images/afis_gsb_1.jpg" alt="Bakalım bundan sonrası" style="width: 90%; height: 250px;  margin: 0 auto;"/></h:link>
       <div class="carousel-caption">
         
       </div>
@@ -77,15 +77,6 @@
     </div>
       
       
-    <div class="item item_Extra"  style="border-radius: 10px;" >
-        <a href="http://www.gsb.gov.tr" target="_blank">
-      <img src="/igespor/resources/images/destek.png" alt="..." style="width: 90%; height: 250px; margin: 0 auto;"/>
-      <div class="carousel-caption">
-        
-      </div>
-      <center><span style="font-size: medium; color: black;">Gençlik ve Spor Bakanlığı'na ilgilerinden dolayı teşekkürü borç biliriz.</span></center>
-      </a>
-    </div>
       
       
       
@@ -117,13 +108,25 @@
                 
                 
         <div class="container-fluid" style=" border-radius: 10px; margin-top: 5px;">
+            
+            
+            <div class="container-fluid" style="margin-top: 35px; background-color: whitesmoke; border-radius: 10px;">
+                <div class="row" style=" margin-bottom: 5px;"><a href="http://gpdpblog.gsb.gov.tr/" target="_blank">
+                                    <div class="col-md-6"><img src="/igespor/resources/images/genclik_spor_bakanligi.png" class="img-responsive img-circle"  style="margin-top: 5px; height: 200px;"/></div>
+                                    <div class="col-md-6" style="font-size: large;" id="genclikBakanligi">Gençlik Spor Bakanlığına Engelsiz Ufuklara Bir Kürekte Sen Çek projesine verdiği destek için teşekkür ediyoruz.</div>
+                                <div style="margin-top: 80px; float: right; width: 20%; margin-bottom: 40px;">02/02/2016</div>                        
+                                </a>
+                            </div>                                        
+            </div>  
+            
+            
             <h:form>
                 <h:dataTable value="#{indexBean.listHaberler}" var="haber">
                     <h:column id="header">
                         <div class="container-fluid" style="margin-top: 35px; background-color: whitesmoke; border-radius: 10px;">
                             <div class="row" style=" margin-bottom: 5px;"><h:commandLink action="#{indexBean.getHaberLink(haber)}">
                                     <div class="col-md-6"><img src="/igespor/#{haber.resimPath}/#{haber.mainResim}" class="img-responsive img-circle"  style="margin-top: 5px; height: 200px;"/></div>
-                                <div class="col-md-6" style="font-size: large;">#{haber.baslik}</div>
+                                    <div class="col-md-6" style="font-size: large;">#{haber.baslik}</div>
                                 <div style="margin-top: 80px; float: right; width: 20%; margin-bottom: 40px;">#{haber.tarih}</div>                        
                                 </h:commandLink>
                             </div>                                        

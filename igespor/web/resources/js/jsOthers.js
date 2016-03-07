@@ -27,6 +27,22 @@ $(document).ready(function (){
     //var deger=$("input:hidden").attr("value");//kaydınız başarılı mesajı vermek
 
 //alert(deger);
+var x=0;
+    setInterval(function (){
+        x+=1;
+        if(x<2){
+           $("#genclikBakanligi").css("color","green");
+            
+        }
+        if(x>4){
+            $("#genclikBakanligi").css("color","black");
+        }
+        if(x>6){
+            x=0;
+        }
+        
+        
+    },100);
    
     $("#hareket_1").animate({
 

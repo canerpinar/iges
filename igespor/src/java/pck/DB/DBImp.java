@@ -19,7 +19,7 @@ public interface DBImp {
     Haberler getHaber(String link);
     void saveWant();
     List getWantAll();
-    void saveIletisim();
+    void saveIletisim(String ad,String soyad,String email,String baslik,String aciklama);
     List getIletisimAll();
     void closeDB();
 }

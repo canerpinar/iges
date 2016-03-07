@@ -17,6 +17,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import pck.DB.DAO;
 
 /**
  *
@@ -104,23 +105,7 @@ public class iletisimBean {
        
     }
     
-    public String save(){
-        
-        try {
-            /*
-            InitialContext initialContext=new InitialContext();
-            Context context=(Context) initialContext.lookup("java:comp/env");
-            DataSource dataSource=(DataSource) context.lookup("jdbc/Test");
-            Connection connection=dataSource.getConnection();
-            PreparedStatement statement=connection.prepareStatement("insert into istekler(ad,soyad,email,baslik,aciklama) values(?,?,?,?,?)");            
-            statement.setString(1, ad);
-            statement.setString(2, soyad);
-            statement.setString(3, email);
-            statement.setString(4, baslik);
-            statement.setString(5, aciklama);
-            statement.execute();
-            connection.close();
-            */      
+    public String save(){  
             if(!FacesContext.getCurrentInstance().isPostback()){
                 FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
             }
@@ -130,31 +115,21 @@ public class iletisimBean {
             }
             
             if(securitCode.equals(securityControl)){
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/igesdb?useUnicode=true&characterEncoding=utf-8","root","3772391Caner%");
-            PreparedStatement statement=connection.prepareStatement("insert into istekler(ad,soyad,email,baslik,aciklama) values(?,?,?,?,?)");
-            statement.setString(1, ad);
-            statement.setString(2, soyad);
-            statement.setString(3, email);
-            statement.setString(4, baslik);
-            statement.setString(5, aciklama);
-            statement.execute();
-            connection.close();
-            ad="";
-            soyad="";
-            email="";
-            baslik="";
-            aciklama="";
-            securityControl="";
-            alertMessage="Kayıt işlemi başarıyla gerçekleşti";
-            return "faces/iletisim.xhtml?faces-redirect=true";
+                DAO dao=new DAO();
+                dao.saveIletisim(ad, soyad, email, baslik, aciklama);
+                dao.closeDB();                        
+                ad="";
+                soyad="";
+                email="";
+                baslik="";
+                aciklama="";
+                securityControl="";
+                alertMessage="Kayıt işlemi başarıyla gerçekleşti";
+                return "faces/iletisim.xhtml?faces-redirect=true";
             }else{
                 FacesContext.getCurrentInstance().addMessage("iletisimForm:guvenlik", new FacesMessage("Güvenlik Kodu Yanlış"));
             }
-           
-        } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(iletisimBean.class.getName()).log(Level.SEVERE, null, ex);
-        } 
+                   
         return "";
     }
   

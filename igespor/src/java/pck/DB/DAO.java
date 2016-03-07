@@ -29,7 +29,7 @@ public class DAO implements DBImp{
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/igesdb?useUnicode=true&characterEncoding=utf-8","root","3772391Caner%");
+            connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/igesdb?useUnicode=true&characterEncoding=utf-8","root","06061989");
         } catch (SQLException ex) {
             Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
@@ -48,8 +48,22 @@ public class DAO implements DBImp{
     }
 
     @Override
-    public void saveIletisim() {
+    public void saveIletisim(String ad,String soyad,String email,String baslik,String aciklama) {
+            PreparedStatement statement;
+        try {
+            statement = connection.prepareStatement("insert into istekler(ad,soyad,email,baslik,aciklama) values(?,?,?,?,?)");
+            statement.setString(1, ad);
+            statement.setString(2, soyad);
+            statement.setString(3, email);
+            statement.setString(4, baslik);
+            statement.setString(5, aciklama);
+            statement.execute();
+            statement.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
+            
     }
     @Override
     public List getIletisimAll() {
@@ -65,6 +79,7 @@ public class DAO implements DBImp{
                 istekler.setEmail(resultSet.getString(3));
                 istekler.setAciklama(resultSet.getString(4));
                 listIstekler.add(istekler);
+                resultSet.close();
                 statement.close();
             }
         } catch (SQLException ex) {
@@ -88,7 +103,7 @@ public class DAO implements DBImp{
     public void saveHaber(String baslik, String icerik, String imagesPath,String tarih,String mainResim,String haberLink) {
         
         try {
-            PreparedStatement statement=connection.prepareStatement("insert into haberler(baslik,icerik,resimpath,tarih,mainresim,link) values(?,?,?,?,?)");
+            PreparedStatement statement=connection.prepareStatement("insert into haberler(baslik,icerik,resimpath,tarih,mainresim,link) values(?,?,?,?,?,?)");
             statement.setString(1, baslik);
             statement.setString(2, icerik);
             statement.setString(3, imagesPath);

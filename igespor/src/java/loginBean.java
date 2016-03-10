@@ -1,9 +1,11 @@
 
+import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,10 +17,10 @@ import org.apache.shiro.subject.Subject;
  *
  * @author caner
  */
-@ManagedBean
+@ManagedBean(name = "login")
 @RequestScoped
-public class loginBean {
-    private String username,password;
+public class loginBean implements Serializable{
+    String username,password;
 
     public String getUsername() {
         return username;
@@ -37,7 +39,7 @@ public class loginBean {
     }
     
     public String girisControl(){        
-        Subject currentUser = SecurityUtils.getSubject();
+        Subject currentUser = SecurityUtils.getSubject();        
         UsernamePasswordToken token = new UsernamePasswordToken(username,password);         
         currentUser.login(token);        
         if(currentUser.hasRole("admin"))

@@ -9,10 +9,10 @@
         <h:form>
             <h:panelGrid columns="2">
                 <h:outputText value="Kullanıcı Adı:"/>
-                <h:inputText value="#{loginBean.username}" />
+                <h:inputText value="#{login.username}" />
                 <h:outputText value="Password:"/>
-                <h:inputText value="#{loginBean.password}" />
-                <h:commandButton value="Giriş" action="#{loginBean.girisControl()}" />
+                <h:inputText value="#{login.password}" />
+                <h:commandButton value="Giriş" action="#{login.girisControl()}" />
             </h:panelGrid>
             
         </h:form>

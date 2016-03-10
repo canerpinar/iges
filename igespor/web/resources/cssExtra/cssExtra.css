@@ -54,6 +54,11 @@ span{
     height: 3px; width: 100%; margin: 0 auto; margin-top: 35px;  background-image: url(images/background_seperator.png);
 }
 
+#genclikBakanligi{
+    text-align: justify;
+}
+
+
 #img_serkan
 {
  display: none;
@@ -83,9 +88,16 @@ span{
 
 @media only screen and (min-width: 320px) {
 
+    .container_Index{
+        width: 350px;
+        margin-top: 35px;
+        background-color: whitesmoke;
+        border-radius: 10px;
+
+    }
     #img_serkan{
         visibility: hidden;
-        margin-top: -210px;
+        margin-top: -210px;        
     }
     
     #img_serkan_trans{
@@ -115,6 +127,15 @@ span{
 
 @media only screen and (min-width: 720px) {
 
+    .container_Index{
+        width: 350px;
+        margin-top: 35px;
+        background-color: whitesmoke;
+        border-radius: 10px;
+    }
+    
+    
+    
     #img_serkan{
         visibility: hidden;
         margin-top: -150px;
@@ -132,6 +153,7 @@ span{
     #bizimleIletisim{
     margin-top: 10px;
     background-color: silver;
+    border-radius: 10px;
     }
 
     #gpdpLogo{
@@ -142,6 +164,13 @@ span{
 
 @media only screen and (min-width: 1280px) {
 
+    .container_Index{
+        width: 550px;
+        margin-top: 35px;
+        background-color: whitesmoke;
+        border-radius: 10px;       
+    }
+    
     #img_serkan{
         visibility: visible;
         margin-top: -190px;

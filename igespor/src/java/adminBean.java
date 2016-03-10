@@ -125,7 +125,7 @@ public class adminBean {
     public void uploadSingle(){
         sayac++;
         InputStream inputStream=null;
-        String realPath=FacesContext.getCurrentInstance().getExternalContext().getRealPath("/")+"/"+resimpath+"/"+singleFile.getName()+String.valueOf(sayac);
+        String realPath=FacesContext.getCurrentInstance().getExternalContext().getRealPath("/")+"/"+resimpath+"/"+"main_"+String.valueOf(sayac)+".jpg";
         try {
             FileOutputStream outputStream=new FileOutputStream(realPath);
             inputStream=singleFile.getInputStream();

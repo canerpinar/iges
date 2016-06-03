@@ -122,6 +122,9 @@ span{
         margin-top: 10px;
         box-shadow: 0 0 25px #7d7163;
     }
+    #destekProjeRow{
+        height: 250px;
+    }
     
 }
 
